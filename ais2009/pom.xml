@@ -724,6 +724,6 @@
         <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
         <jdbc.url><![CDATA[jdbc:mysql://localhost/ais2009?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]></jdbc.url>
         <jdbc.username>root</jdbc.username>
-        <jdbc.password></jdbc.password>
+        <jdbc.password>sa</jdbc.password>
     </properties>
 </project>
