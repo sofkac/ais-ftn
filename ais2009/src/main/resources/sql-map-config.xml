@@ -10,6 +10,4 @@
     <sqlMap resource="sqlmaps/LookupSQL.xml"/>
     <sqlMap resource="sqlmaps/RoleSQL.xml"/>
     <sqlMap resource="sqlmaps/UserSQL.xml"/>
-
-    <!-- You can safely delete this file if you're using Hibernate or JPA. -->
 </sqlMapConfig>

@@ -3,7 +3,7 @@
 
 <hibernate-configuration>
     <session-factory>
-        <mapping class="org.appfuse.model.User"/>
-        <mapping class="org.appfuse.model.Role"/>
+        <mapping class="edu.ftn.ais.model.User"/>
+        <mapping class="edu.ftn.ais.model.Role"/>
     </session-factory>
 </hibernate-configuration>
