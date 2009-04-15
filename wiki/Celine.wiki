@@ -1,3 +1,4 @@
+-----
 =Frameworks=
   * Hibernate
   * Spring
@@ -12,7 +13,7 @@
   * maven
   * SVN
   * Eclipse
-=J2EE Arhitektura, layers=
+=J2EE Architecture, layers=
   * POJO
   * Persistance
     * DAO pattern
