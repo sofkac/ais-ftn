@@ -1,11 +1,12 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
-import edu.ftn.ais.service.KlijentManager;
-import edu.ftn.ais.model.Klijent;
-import edu.ftn.ais.webapp.action.BaseActionTestCase;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import edu.ftn.ais.model.Klijent;
+import edu.ftn.ais.service.KlijentManager;
 
 public class KlijentActionTest extends BaseActionTestCase {
     private KlijentAction action;

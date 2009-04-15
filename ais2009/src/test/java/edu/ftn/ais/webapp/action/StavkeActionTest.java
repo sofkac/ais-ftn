@@ -1,11 +1,14 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import java.math.BigDecimal;
+
 import org.apache.struts2.ServletActionContext;
-import edu.ftn.ais.service.StavkeManager;
-import edu.ftn.ais.model.Stavke;
-import edu.ftn.ais.webapp.action.BaseActionTestCase;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import edu.ftn.ais.model.Stavke;
+import edu.ftn.ais.service.StavkeManager;
 
 public class StavkeActionTest extends BaseActionTestCase {
     private StavkeAction action;
@@ -21,7 +24,7 @@ public class StavkeActionTest extends BaseActionTestCase {
         Stavke stavke = new Stavke();
 
         // enter all required fields
-        stavke.setKolicina("VrDjGsWsOjQtRkAwRmYsWfSvIxBbXpIwZfQsNsUnNvWaUcUnVkUsZjByGsDoJgVuNlVrLtJiOiCiWnWqJbRzYsPrRcKlVsHuHkPuUsCwVoPeDxSlHrHlBvOcCmItYgLiEbJpEgHrIoQcKuXtWfUaPsAlQdLvCcLeXlBnQeUnRmRbMoEkWyGcFgPjLvZmZuSpSbMtWkBlHeYjExSxBoTbQlWhSsOpMjRqNrVpHzGwYhOvAySmWoNfKgDnKhEqYrY");
+        stavke.setKolicina(new BigDecimal("11.11"));
 
         stavkeManager.save(stavke);
     }
@@ -49,7 +52,7 @@ public class StavkeActionTest extends BaseActionTestCase {
 
         Stavke stavke = action.getStavke();
         // update required fields
-        stavke.setKolicina("ThEkXrOqCjJjUaFfFkSjWfMtXxYlPqMwPpQxWxRqTdOmAxByStWiWcBfLiNeIlGaHoYoByXiYuZyIeItOhCtAgKxRhCyYtLdMwJsNcUaJjHjRzJdNpVfDuGwKeEjIuFiHeNsOpFoNcFiNpYxRiPgBxMzWeByKxWmVsKvGfXdQdTpKyUjTnPuCiMdZbLdAiFuNdCsMmJcKxGsQlGkEyChQwJaUsHkNhPuLqEwHuYjHlZaPxCfUzHuZjZvJmVwOyO");
+        stavke.setKolicina(new BigDecimal("11.11"));
 
         action.setStavke(stavke);
 

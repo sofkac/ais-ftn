@@ -1,17 +1,18 @@
 package edu.ftn.ais.service.impl;
 
+import static org.junit.Assert.assertSame;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jmock.Expectations;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 import edu.ftn.ais.dao.StavkeDao;
 import edu.ftn.ais.model.Stavke;
-import edu.ftn.ais.service.impl.BaseManagerMockTestCase;
-
-import org.jmock.Expectations;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class StavkeManagerImplTest extends BaseManagerMockTestCase {
     private StavkeManagerImpl manager = null;
@@ -67,7 +68,7 @@ public class StavkeManagerImplTest extends BaseManagerMockTestCase {
 
         final Stavke stavke = new Stavke();
         // enter all required fields
-        stavke.setKolicina("FkXlRvWvMzWpOyPhBjImIwIqWcFfBxCyYwCtOdAdWhXmQvNlXqLbVzZcSkPyItCcCsUeFlPcGxXfMpCqPrPcMoJsOpDtGvChSgEvIdZuTrIwNlMePcCxYqFaAxEvIdGoMwNlOvVtWhZsJlPvMlHqVnCuRmWhDcHvRwWeBzWuLqSfHqMwWuXtShRmSoKyIaOuSaZqOuTiXqBjUjFwJqPnTdDfShIiTaNxTzRdCmGqTuOeNpQbYgAfJkDqTrItBgD");
+        stavke.setKolicina(new BigDecimal("11.11"));
         
         // set expected behavior on dao
         context.checking(new Expectations() {{
