@@ -34,6 +34,7 @@ public class Faktura extends BaseObject implements Serializable {
     public void setIdf(Long idf) {
         this.idf = idf;
     }
+
 @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="FK_K", nullable=false)
     public Klijent getKlijent() {
@@ -70,14 +71,16 @@ public class Faktura extends BaseObject implements Serializable {
     public void setNapomena(String napomena) {
         this.napomena = napomena;
     }
-//@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="faktura")
+
+//    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="faktura")
 //    public Set<Stavke> getStavkes() {
 //        return this.stavkes;
 //    }
-    
+
 //    public void setStavkes(Set<Stavke> stavkes) {
 //        this.stavkes = stavkes;
 //    }
+        
 
     public boolean equals(Object o) {
         if (this == o) return true;

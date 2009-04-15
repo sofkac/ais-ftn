@@ -9,7 +9,7 @@
 
     <!-- runs all targets -->
     <target name="run-all-tests" 
-        depends="Login,Logout,PasswordHint,Signup,StaticPages,UserTests,FlushCache,FileUpload"
+        depends="Login,Logout,PasswordHint,Signup,StaticPages,UserTests,FlushCache,FileUpload,RobaTests,KlijentTests,FakturaTests,StavkeTests"
         description="Call and executes all test cases (targets)"/>
     
     <!-- runs user-related tests -->
@@ -222,4 +222,376 @@
             </steps>
         </webtest>
     </target>
+    <!--Stavke-START-->
+    <!-- runs stavke-related tests -->
+    <target name="StavkeTests" depends="SearchStavkes,EditStavke,SaveStavke,AddStavke,DeleteStavke"
+            description="Call and executes all stavke test cases (targets)">
+        <echo>Successfully ran all Stavke UI tests!</echo>
+    </target>
+
+    <!-- Verify the stavkes list screen displays without errors -->
+    <target name="SearchStavkes" description="Tests search for and displaying all stavkes">
+        <webtest name="searchStavkes">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Stavke link" url="/stavkes.html"/>
+                <verifytitle description="we should see the stavkeList title"
+                             text=".*${stavkeList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit stavke screen displays without errors -->
+    <target name="EditStavke" description="Tests editing an existing Stavke's information">
+        <webtest name="editStavke">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Stavke link" url="/editStavke.html?ids=-1"/>
+                <verifytitle description="we should see the stavkeDetail title"
+                             text=".*${stavkeDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a stavke and then save -->
+    <target name="SaveStavke" description="Tests editing and saving a stavke">
+        <webtest name="saveStavke">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Stavke link" url="/editStavke.html?ids=-1"/>
+                <verifytitle description="we should see the stavkeDetail title"
+                             text=".*${stavkeDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set kolicina" name="stavke.kolicina" value="MrGtLkYcStBxPuIvYbPgIpVqJwFeAtYmSoOtLwYcPaIoWrUuVsKnWjTkNqXqSdGuVkLbVaArBcFiXeZdIkIdUhWoQyNxKnWzQdHoDyVhCrJcQbQnToGdPjYiMrZvQdGkKpGsMvAkVtBrSaLhCwCwXqYsLhNaUpPvMtXyIuZzNhVbAmBxXlWyJsKxOjDkDdQnUkEcYsVmJyWpGcNpRuGfOgCpLwMcAaNpUyHyZuTtUlIjTcReIpJdEyZsYaVkJfC"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                             text=".*${stavkeDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${stavke.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Stavke -->
+    <target name="AddStavke" description="Adds a new Stavke">
+        <webtest name="addStavke">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/editStavke.html"/>
+                <verifytitle description="we should see the stavkeDetail title"
+                             text=".*${stavkeDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set kolicina" name="stavke.kolicina" value="LoPfFhUkNuVyDsMfIbEuHkPdJgJlKmKiOiKhTxWsWwFbBnQoUhRoErOjDiDbIyCyLbLaZhSaFuSuFhAfGyByIoGtLiOsOxClCiYhOfMcExNjWyMlCaVzKzFmHpVtUtFhHnCpGdTwCoIuJbIbMlMnCrAdEtEeElFiNeUrEoWbNwByAlAlZvWmQsUxKxYcGaZpZtSlEiCiBrUmJtYwXbWgWrXjMiIrOkXaUkTaOzAiMsTlTeNeNrLnSrRfUkCaUeU"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Stavke List appears if save successful"
+                             text=".*${stavkeList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${stavke.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing stavke -->
+    <target name="DeleteStavke" description="Deletes existing Stavke">
+        <webtest name="deleteStavke">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Stavke link" url="/editStavke.html?ids=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Stavke List" text=".*${stavkeList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${stavke.deleted}"/>
+            </steps>
+        </webtest>
+    </target>
+    <!--Stavke-END-->
+    <!--Faktura-START-->
+    <!-- runs faktura-related tests -->
+    <target name="FakturaTests" depends="SearchFakturas,EditFaktura,SaveFaktura,AddFaktura,DeleteFaktura"
+            description="Call and executes all faktura test cases (targets)">
+        <echo>Successfully ran all Faktura UI tests!</echo>
+    </target>
+
+    <!-- Verify the fakturas list screen displays without errors -->
+    <target name="SearchFakturas" description="Tests search for and displaying all fakturas">
+        <webtest name="searchFakturas">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Faktura link" url="/fakturas.html"/>
+                <verifytitle description="we should see the fakturaList title"
+                             text=".*${fakturaList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit faktura screen displays without errors -->
+    <target name="EditFaktura" description="Tests editing an existing Faktura's information">
+        <webtest name="editFaktura">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Faktura link" url="/editFaktura.html?idf=-1"/>
+                <verifytitle description="we should see the fakturaDetail title"
+                             text=".*${fakturaDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a faktura and then save -->
+    <target name="SaveFaktura" description="Tests editing and saving a faktura">
+        <webtest name="saveFaktura">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Faktura link" url="/editFaktura.html?idf=-1"/>
+                <verifytitle description="we should see the fakturaDetail title"
+                             text=".*${fakturaDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set datum" name="faktura.datum" value="04/15/2009"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                             text=".*${fakturaDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${faktura.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Faktura -->
+    <target name="AddFaktura" description="Adds a new Faktura">
+        <webtest name="addFaktura">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/editFaktura.html"/>
+                <verifytitle description="we should see the fakturaDetail title"
+                             text=".*${fakturaDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set datum" name="faktura.datum" value="04/15/2009"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Faktura List appears if save successful"
+                             text=".*${fakturaList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${faktura.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing faktura -->
+    <target name="DeleteFaktura" description="Deletes existing Faktura">
+        <webtest name="deleteFaktura">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Faktura link" url="/editFaktura.html?idf=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Faktura List" text=".*${fakturaList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${faktura.deleted}"/>
+            </steps>
+        </webtest>
+    </target>
+    <!--Faktura-END-->
+    <!--Klijent-START-->
+    <!-- runs klijent-related tests -->
+    <target name="KlijentTests" depends="SearchKlijents,EditKlijent,SaveKlijent,AddKlijent,DeleteKlijent"
+            description="Call and executes all klijent test cases (targets)">
+        <echo>Successfully ran all Klijent UI tests!</echo>
+    </target>
+
+    <!-- Verify the klijents list screen displays without errors -->
+    <target name="SearchKlijents" description="Tests search for and displaying all klijents">
+        <webtest name="searchKlijents">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Klijent link" url="/klijents.html"/>
+                <verifytitle description="we should see the klijentList title"
+                             text=".*${klijentList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit klijent screen displays without errors -->
+    <target name="EditKlijent" description="Tests editing an existing Klijent's information">
+        <webtest name="editKlijent">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Klijent link" url="/editKlijent.html?idk=-1"/>
+                <verifytitle description="we should see the klijentDetail title"
+                             text=".*${klijentDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a klijent and then save -->
+    <target name="SaveKlijent" description="Tests editing and saving a klijent">
+        <webtest name="saveKlijent">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Klijent link" url="/editKlijent.html?idk=-1"/>
+                <verifytitle description="we should see the klijentDetail title"
+                             text=".*${klijentDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set adresa" name="klijent.adresa" value="OxSlBmXtMlMeYfKgTmSkIeLcMqYkCwLqPmGxSbZlYtYtH"/>
+                <setInputField description="set mesto" name="klijent.mesto" value="EfRiXzFzQfZeOsChYuMcJdStZ"/>
+                <setInputField description="set naziv" name="klijent.naziv" value="BpEoObTiMtMqBzPwYxWhYvHvWdQxPmLzLyKtUdGcYoPgU"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                             text=".*${klijentDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${klijent.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Klijent -->
+    <target name="AddKlijent" description="Adds a new Klijent">
+        <webtest name="addKlijent">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/editKlijent.html"/>
+                <verifytitle description="we should see the klijentDetail title"
+                             text=".*${klijentDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set adresa" name="klijent.adresa" value="FmGzMkFcLaVxEbEmDlPePkLcIgQiEzGdVhRrZcYvUiObJ"/>
+                <setInputField description="set mesto" name="klijent.mesto" value="HuVoLaFsAbPwDeFnCqHsHhYjX"/>
+                <setInputField description="set naziv" name="klijent.naziv" value="XmLyVaGsCxUfPuCgYpZgQaHrRhLcJlRbQfTgVtQiMiIaD"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Klijent List appears if save successful"
+                             text=".*${klijentList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${klijent.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing klijent -->
+    <target name="DeleteKlijent" description="Deletes existing Klijent">
+        <webtest name="deleteKlijent">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Klijent link" url="/editKlijent.html?idk=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Klijent List" text=".*${klijentList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${klijent.deleted}"/>
+            </steps>
+        </webtest>
+    </target>
+    <!--Klijent-END-->
+    <!--Roba-START-->
+    <!-- runs roba-related tests -->
+    <target name="RobaTests" depends="SearchRobas,EditRoba,SaveRoba,AddRoba,DeleteRoba"
+            description="Call and executes all roba test cases (targets)">
+        <echo>Successfully ran all Roba UI tests!</echo>
+    </target>
+
+    <!-- Verify the robas list screen displays without errors -->
+    <target name="SearchRobas" description="Tests search for and displaying all robas">
+        <webtest name="searchRobas">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Roba link" url="/robas.html"/>
+                <verifytitle description="we should see the robaList title"
+                             text=".*${robaList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit roba screen displays without errors -->
+    <target name="EditRoba" description="Tests editing an existing Roba's information">
+        <webtest name="editRoba">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Roba link" url="/editRoba.html?idr=-1"/>
+                <verifytitle description="we should see the robaDetail title"
+                             text=".*${robaDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a roba and then save -->
+    <target name="SaveRoba" description="Tests editing and saving a roba">
+        <webtest name="saveRoba">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Roba link" url="/editRoba.html?idr=-1"/>
+                <verifytitle description="we should see the robaDetail title"
+                             text=".*${robaDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set jm" name="roba.jm" value="JtQbAuPtBp"/>
+                <setInputField description="set kolicina" name="roba.kolicina" value="2976410767133888512"/>
+                <setInputField description="set naziv" name="roba.naziv" value="QxDyMkSsRnPpYkLeRwShGgHfOtQnZvXnKhFvFdVfOfLfJqFbPr"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                             text=".*${robaDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${roba.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Roba -->
+    <target name="AddRoba" description="Adds a new Roba">
+        <webtest name="addRoba">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/editRoba.html"/>
+                <verifytitle description="we should see the robaDetail title"
+                             text=".*${robaDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set jm" name="roba.jm" value="TsTuElZjCr"/>
+                <setInputField description="set kolicina" name="roba.kolicina" value="4565260598571247616"/>
+                <setInputField description="set naziv" name="roba.naziv" value="TvQrLyZfFrWpEoXtXaIbGfGpEtYnNhClOtZwNcXePkBvMgKpYx"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Roba List appears if save successful"
+                             text=".*${robaList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${roba.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing roba -->
+    <target name="DeleteRoba" description="Deletes existing Roba">
+        <webtest name="deleteRoba">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Roba link" url="/editRoba.html?idr=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Roba List" text=".*${robaList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${roba.deleted}"/>
+            </steps>
+        </webtest>
+    </target>
+    <!--Roba-END-->
 </project>

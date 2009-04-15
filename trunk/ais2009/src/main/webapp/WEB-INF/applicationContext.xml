@@ -3,7 +3,55 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
        default-lazy-init="true">
 
+    <!--StavkeDao-START-->
+    <bean id="stavkeDao" class="edu.ftn.ais.dao.hibernate.StavkeDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--StavkeDao-END-->
+
+    <!--FakturaDao-START-->
+    <bean id="fakturaDao" class="edu.ftn.ais.dao.hibernate.FakturaDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--FakturaDao-END-->
+
+    <!--KlijentDao-START-->
+    <bean id="klijentDao" class="edu.ftn.ais.dao.hibernate.KlijentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--KlijentDao-END-->
+
+    <!--RobaDao-START-->
+    <bean id="robaDao" class="edu.ftn.ais.dao.hibernate.RobaDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--RobaDao-END-->
+
     <!-- Add new DAOs here -->
+
+    <!--StavkeManager-START-->
+    <bean id="stavkeManager" class="edu.ftn.ais.service.impl.StavkeManagerImpl">
+        <constructor-arg ref="stavkeDao"/>
+    </bean>
+    <!--StavkeManager-END-->
+
+    <!--FakturaManager-START-->
+    <bean id="fakturaManager" class="edu.ftn.ais.service.impl.FakturaManagerImpl">
+        <constructor-arg ref="fakturaDao"/>
+    </bean>
+    <!--FakturaManager-END-->
+
+    <!--KlijentManager-START-->
+    <bean id="klijentManager" class="edu.ftn.ais.service.impl.KlijentManagerImpl">
+        <constructor-arg ref="klijentDao"/>
+    </bean>
+    <!--KlijentManager-END-->
+
+    <!--RobaManager-START-->
+    <bean id="robaManager" class="edu.ftn.ais.service.impl.RobaManagerImpl">
+        <constructor-arg ref="robaDao"/>
+    </bean>
+    <!--RobaManager-END-->
 
     <!-- Add new Managers here -->
 
