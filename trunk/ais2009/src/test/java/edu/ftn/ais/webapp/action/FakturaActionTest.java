@@ -7,6 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import edu.ftn.ais.model.Faktura;
 import edu.ftn.ais.service.FakturaManager;
+import edu.ftn.ais.service.KlijentManager;
 
 public class FakturaActionTest extends BaseActionTestCase {
     private FakturaAction action;
@@ -18,11 +19,16 @@ public class FakturaActionTest extends BaseActionTestCase {
         FakturaManager fakturaManager = (FakturaManager) applicationContext.getBean("fakturaManager");
         action.setFakturaManager(fakturaManager);
     
+        //added by neso
+        KlijentManager klijentManager = (KlijentManager) applicationContext.getBean("klijentManager");
+        //end
+        
         // add a test faktura to the database
         Faktura faktura = new Faktura();
 
         // enter all required fields
         faktura.setDatum(new java.util.Date());
+        faktura.setKlijent(klijentManager.get(-1L));
 
         fakturaManager.save(faktura);
     }
