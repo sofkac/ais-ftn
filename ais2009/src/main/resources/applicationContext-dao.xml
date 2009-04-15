@@ -14,6 +14,10 @@
                 hibernate.cache.use_second_level_cache=true
                 hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
             </value>
+			<!--
+				hibernate.show_sql=true
+				hibernate.format_sql=true
+			-->
             <!-- Turn batching off for better error messages under PostgreSQL -->
             <!-- hibernate.jdbc.batch_size=0 -->
         </property>

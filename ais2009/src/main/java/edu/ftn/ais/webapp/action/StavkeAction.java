@@ -1,15 +1,25 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.Preparable;
-import edu.ftn.ais.service.StavkeManager;
-import edu.ftn.ais.model.Stavke;
-import edu.ftn.ais.webapp.action.BaseAction;
-
 import java.util.List;
+
+import com.opensymphony.xwork2.Preparable;
+
+import edu.ftn.ais.model.Stavke;
+import edu.ftn.ais.service.FakturaManager;
+import edu.ftn.ais.service.KlijentManager;
+import edu.ftn.ais.service.RobaManager;
+import edu.ftn.ais.service.StavkeManager;
 
 public class StavkeAction extends BaseAction implements Preparable {
     private StavkeManager stavkeManager;
-    private List stavkes;
+    private RobaManager robaManager;
+    private FakturaManager fakturaManager;
+    private KlijentManager klijentManager;
+    
+    private List stavkes = null;
+    private List robas = null;
+    private List fakturas = null;
+    
     private Stavke stavke;
     private Long  ids;
 
@@ -17,14 +27,43 @@ public class StavkeAction extends BaseAction implements Preparable {
         this.stavkeManager = stavkeManager;
     }
 
+    //added by neso
+    public void setRobaManager(RobaManager robaManager) {
+        this.robaManager = robaManager;
+    }
+
+    //added by neso
+    public void setFakturaManager(FakturaManager fakturaManager) {
+        this.fakturaManager = fakturaManager;
+    }
+
+    //added by neso
+    public void setKlijentManager(KlijentManager klijentManager) {
+        this.klijentManager = klijentManager;
+    }
+
     public List getStavkes() {
         return stavkes;
     }
 
+    //added by neso
+    public List getFakturas() {
+        return fakturas;
+    }
+
+    //added by neso
+    public List getRobas() {
+        return robas;
+    }
+    
     /**
      * Grab the entity from the database before populating with request parameters
      */
     public void prepare() {
+    	//added by neso
+    	prepareLists();		
+        //end
+    	
         if (getRequest().getMethod().equalsIgnoreCase("post")) {
             // prevent failures on new
             String stavkeId = getRequest().getParameter("stavke.ids");
@@ -34,6 +73,13 @@ public class StavkeAction extends BaseAction implements Preparable {
         }
     }
 
+	//added by neso
+    private void prepareLists() {   	
+        this.robas = robaManager.getAll();
+        this.fakturas = fakturaManager.getAll();
+	}
+
+    
     public String list() {
         stavkes = stavkeManager.getAll();
         return SUCCESS;

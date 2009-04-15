@@ -9,11 +9,11 @@
     <li style="display: none">
         <s:hidden key="faktura.idf"/>
     </li>
+    <s:select key="faktura.klijent" name="faktura.klijent.idk" list="klijents" listKey="idk" listValue="naziv"></s:select>
     <s:textfield key="faktura.datum" required="true" cssClass="text medium"/>
     <s:textfield key="faktura.iznos" required="false" maxlength="255" cssClass="text medium"/>
-    <!-- todo: change this to read the identifier field from the other pojo -->
-    <s:select name="faktura.klijent.id" list="klijentList" listKey="id" listValue="id"></s:select>
-    <s:textfield key="faktura.napomena" required="false" maxlength="200" cssClass="text medium"/>
+    <!-- <s:textfield key="faktura.napomena" required="false" maxlength="200" cssClass="text medium"/> -->
+    <s:textarea key="faktura.napomena" required="false" cssClass="text medium"/>
 
     <li class="buttonBar bottom">
         <s:submit cssClass="button" method="save" key="button.save" theme="simple"/>

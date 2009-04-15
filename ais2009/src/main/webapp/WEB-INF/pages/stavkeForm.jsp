@@ -9,12 +9,10 @@
     <li style="display: none">
         <s:hidden key="stavke.ids"/>
     </li>
-    <!-- todo: change this to read the identifier field from the other pojo -->
-    <s:select name="stavke.faktura.id" list="fakturaList" listKey="id" listValue="id"></s:select>
+    <s:select key="stavke.faktura" name="stavke.faktura.idf" list="fakturas" headerKey="-10" headerValue="--Select Faktura--" listKey="idf" listValue="idf"></s:select>
+    <s:select key="stavke.roba" name="stavke.roba.idr" headerKey="-10" headerValue="--Select Roba--" list="robas" listKey="idr" listValue="naziv"></s:select>
     <s:textfield key="stavke.kolicina" required="true" maxlength="255" cssClass="text medium"/>
     <s:textfield key="stavke.napomena" required="false" maxlength="15" cssClass="text medium"/>
-    <!-- todo: change this to read the identifier field from the other pojo -->
-    <s:select name="stavke.roba.id" list="robaList" listKey="id" listValue="id"></s:select>
 
     <li class="buttonBar bottom">
         <s:submit cssClass="button" method="save" key="button.save" theme="simple"/>
