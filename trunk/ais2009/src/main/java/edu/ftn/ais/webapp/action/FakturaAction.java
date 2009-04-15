@@ -1,17 +1,26 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.Preparable;
-import edu.ftn.ais.service.FakturaManager;
-import edu.ftn.ais.model.Faktura;
-import edu.ftn.ais.webapp.action.BaseAction;
-
 import java.util.List;
+
+import com.opensymphony.xwork2.Preparable;
+
+import edu.ftn.ais.model.Faktura;
+import edu.ftn.ais.service.FakturaManager;
+import edu.ftn.ais.service.KlijentManager;
 
 public class FakturaAction extends BaseAction implements Preparable {
     private FakturaManager fakturaManager;
-    private List fakturas;
+    private KlijentManager klijentManager;
+    private List fakturas = null;
+    private List klijents = null;
+
     private Faktura faktura;
     private Long  idf;
+
+    //added by neso
+    public void setKlijentManager(KlijentManager klijentManager) {
+		this.klijentManager = klijentManager;
+	}
 
     public void setFakturaManager(FakturaManager fakturaManager) {
         this.fakturaManager = fakturaManager;
@@ -20,11 +29,21 @@ public class FakturaAction extends BaseAction implements Preparable {
     public List getFakturas() {
         return fakturas;
     }
+    
+    //added by neso
+    public List getKlijents(){
+    	return klijents;
+    }
 
     /**
      * Grab the entity from the database before populating with request parameters
      */
     public void prepare() {
+
+    	//added by neso
+    	prepareLists();		
+        //end
+    	
         if (getRequest().getMethod().equalsIgnoreCase("post")) {
             // prevent failures on new
             String fakturaId = getRequest().getParameter("faktura.idf");
@@ -34,7 +53,11 @@ public class FakturaAction extends BaseAction implements Preparable {
         }
     }
 
-    public String list() {
+    private void prepareLists() {
+        this.klijents = klijentManager.getAll();
+	}
+
+	public String list() {
         fakturas = fakturaManager.getAll();
         return SUCCESS;
     }

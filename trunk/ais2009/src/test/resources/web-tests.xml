@@ -224,8 +224,7 @@
     </target>
     <!--Stavke-START-->
     <!-- runs stavke-related tests -->
-    <!-- <target name="StavkeTests" depends="SearchStavkes,EditStavke,SaveStavke,AddStavke,DeleteStavke" -->
-    <target name="StavkeTests" depends="SearchStavkes,EditStavke"
+    <target name="StavkeTests" depends="SearchStavkes,EditStavke,SaveStavke,AddStavke,DeleteStavke"
             description="Call and executes all stavke test cases (targets)">
         <echo>Successfully ran all Stavke UI tests!</echo>
     </target>
@@ -289,8 +288,8 @@
 
                 <!-- enter required fields -->
                 <setInputField description="set kolicina" name="stavke.kolicina" value="22"/>
-				<setInputField description="set Roba" name="stavke.roba" value="-1"/>
-				<setInputField description="set Faktura" name="stavke.faktura" value="-1"/>
+				<setselectfield description="set Roba" name="stavke.roba.idr" value="-1"/>
+				<setselectfield description="set Faktura" name="stavke.faktura.idf" value="-1"/>
 
                 <clickbutton label="${button.save}" description="Click button 'Save'"/>
                 <verifytitle description="Stavke List appears if save successful"
@@ -318,8 +317,7 @@
     <!--Stavke-END-->
     <!--Faktura-START-->
     <!-- runs faktura-related tests -->
-    <!-- <target name="FakturaTests" depends="SearchFakturas,EditFaktura,SaveFaktura,AddFaktura,DeleteFaktura" -->
-    <target name="FakturaTests" depends="SearchFakturas,EditFaktura"
+    <target name="FakturaTests" depends="SearchFakturas,EditFaktura,SaveFaktura,AddFaktura,DeleteFaktura"
             description="Call and executes all faktura test cases (targets)">
         <echo>Successfully ran all Faktura UI tests!</echo>
     </target>
