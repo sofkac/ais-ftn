@@ -6,13 +6,9 @@
     <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern"
-                value="[ais2009G1] %p [%t] %c{1}.%M(%L) | %m%n"/>
+                value="%p [%t] %c{1}.%M(%L) | %m%n"/>
         </layout>
     </appender>
-
-    <logger name="com.opensymphony.xwork2.util.OgnlValueStack">
-        <level value="ERROR"/>
-    </logger>
     
     <logger name="net.sf.ehcache">
         <level value="ERROR"/>
@@ -31,6 +27,11 @@
         <level value="FATAL"/>
     </logger>
 
+    <!-- Suppress invalid warning messages from JSF -->
+    <logger name="org.apache.myfaces.shared_impl.renderkit.html">
+        <level value="ERROR"/>
+    </logger>
+
     <logger name="org.hibernate">
         <level value="WARN"/>
     </logger>
@@ -42,28 +43,13 @@
     <logger name="org.springframework">
         <level value="WARN"/>
     </logger>
-
-    <!-- http://issues.appfuse.org/browse/APF-736#action_11786 -->
-    <logger name="com.opensymphony.xwork2.util.XWorkConverter">
-        <level value="FATAL"/>
-    </logger>
-
-    <!-- http://issues.appfuse.org/browse/APF-852 -->
-    <logger name="com.opensymphony.xwork2.util.OgnlUtil">
-        <level value="ERROR"/>
-    </logger>
-
-    <!-- Turn off warnings from messages.jsp -->
-    <logger name="com.opensymphony.xwork2.util.OgnlValueStack">
-        <level value="ERROR"/>
-    </logger>
    
-    <logger name="org.appfuse">
-        <level value="INFO"/>
-    </logger>
-    
     <logger name="edu.ftn.ais">
         <level value="DEBUG"/>
+    </logger>
+
+    <logger name="edu.ftn.ais.webapp.filter.StaticFilter">
+        <level value="INFO"/>
     </logger>
 
     <root>

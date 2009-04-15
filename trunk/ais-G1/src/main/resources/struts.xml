@@ -96,7 +96,7 @@
             <result name="success" type="redirect-action">admin/users</result>
         </action>
 
-        <action name="uploadFile" class="org.appfuse.webapp.action.FileUploadAction">
+        <action name="uploadFile" class="edu.ftn.ais.webapp.action.FileUploadAction">
             <interceptor-ref name="fileUploadStack"/>
             <result name="input">/WEB-INF/pages/uploadForm.jsp</result>
             <result name="success">/WEB-INF/pages/uploadDisplay.jsp</result>
@@ -121,8 +121,8 @@
             <interceptor-ref name="adminCheck"/>
             <result name="success">/WEB-INF/pages/admin/flushCache.jsp</result>
         </action>
-
-        <action name="reload" class="org.appfuse.webapp.action.ReloadAction">
+        
+        <action name="reload" class="edu.ftn.ais.webapp.action.ReloadAction">
             <interceptor-ref name="adminCheck"/>
             <!-- this should never be used, it's here to prevent warnings -->
             <result name="success">/WEB-INF/pages/mainMenu.jsp</result>
