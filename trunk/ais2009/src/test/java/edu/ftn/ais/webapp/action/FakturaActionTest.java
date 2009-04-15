@@ -1,11 +1,12 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
-import edu.ftn.ais.service.FakturaManager;
-import edu.ftn.ais.model.Faktura;
-import edu.ftn.ais.webapp.action.BaseActionTestCase;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import edu.ftn.ais.model.Faktura;
+import edu.ftn.ais.service.FakturaManager;
 
 public class FakturaActionTest extends BaseActionTestCase {
     private FakturaAction action;

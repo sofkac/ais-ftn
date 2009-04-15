@@ -90,96 +90,6 @@
             <value description="role_id">-1</value>
         </row>
     </table>
-    <!--Stavke-START-->
-    <table name="stavke">
-        <column>ids</column>
-        <column>FK_F</column>    
-        <column>Kolicina</column>
-        <column>Napomena</column>
-        <column>FK_R</column>    
-    <row>
-        <value description="ids">-1</value>
-        <value description="FK_F">-1</value>
-        <value description="Kolicina">GvPvKlVjZiLoYyOmUgCgBmUlToCoQsAvLgPnSlLvEgOtRmIeFvCbQgSmFwCyTeKcFvZnShFeEyQqGdOzIuVxRsMtNmIuHzGxHmZfDtCbIcJaEkEnTeGxHaFqEmSsFeXwUxPuQnYbKjTbSaTeLyAfLqFwVzNvVbDiMtDgBxMiAeWvNyDpKuYcYqVsArEgWfYdUaVeUoXlHcAyDaBjOcBtGaKoOlPfBoIfRnZaOlJlQzWrExEsWeMyAjTnAqJuMyK</value>
-        <value description="Napomena">VbXeKhHbGvYcFpD</value>
-        <value description="FK_R">-1</value>
-    </row>
-    <row>
-        <value description="ids">-2</value>
-        <value description="FK_F">-2</value>
-        <value description="Kolicina">EyYsDeOuJlHhVwTvPoEqTaKxEhMbIbDjMrLpVxSzNfVqLcZgQgUnMhEzKgQqXxDyQnFwXfXtCcQxRkGzUiOeRwNgSdLqLoNyOdIyNqMnYoXlSoCzOiBxLxWqYvNjJhAzPdPdSdHhJgRzTcQfNrUyAsJsHoDjPdUtBsEjMjKvXcXeNlMmKsGqTvKsMqVpRxDnWgMdEmLxKxMkSfHrIbVfXeHiMuKxCbKzPeKuCuOfGcZxGyIhPzHoAiCaNiVrVyL</value>
-        <value description="Napomena">GrCrCiSkYyPhXeY</value>
-        <value description="FK_R">-2</value>
-    </row>
-    <row>
-        <value description="ids">-3</value>
-        <value description="FK_F">-3</value>
-        <value description="Kolicina">IaKjZkIoZpBuUrDhYkUlOtZiNfWaLjGkRwWrDoNkQaHxDkScJwRtXqLwVgEjCoNvVdOfJsWbYgWlXkWnVhAyYxZlReJlWlMnVdXqIbHxVtPwEwCbHsUfFmVdMuNbBpZrJsExCrWyStUqTuAiJuOqTuAmQwGgSaVjThLbErUyTiQjLwHlUnGsJwZuNjQnTxKyLaAtBzCnNcSoGfBjNwEgQkZdTfNxPoQqOhBqFbDtFsBhCuIzCbHsHlFiYfEpTwE</value>
-        <value description="Napomena">QwKgEzCvOmIfQpK</value>
-        <value description="FK_R">-3</value>
-    </row>
-    </table>
-    <!--Stavke-END-->
-    <!--Faktura-START-->
-    <table name="faktura">
-        <column>idf</column>
-        <column>Datum</column>
-        <column>Iznos</column>
-        <column>FK_K</column>    
-        <column>Napomena</column>
-    <row>
-        <value description="idf">-1</value>
-        <value description="Datum">2009-04-15</value>
-        <value description="Iznos">EwZbJxCtPfOsLiJmMkNqRtJbXmFuPwWlLdHtLkTwPfLbVeJePeWbIcAtNtXoVfDeVkSgKqCyJrGpSmLmUhBzIqEdYgWzZlVqNgAbBoPqXfPlQeDrQzUjYsRmDaHhXvVxYbCgNyJvVxSiVqInHtCmUeSkFuBdQjRoAeEnCyGcDgToZrXzZkJpOnHuYlAmXmBlMzRdVcXjOzNtQqTjIlWsXnZnQrAqBpIfOlHnWfCeZjAfIwVqKmFlSqBuFtHlVfI</value>
-        <value description="FK_K">-1</value>
-        <value description="Napomena">KwMbQjTnTgUqBiDxDlAgLlFoEoSfBqGkMqHyCoNpQyHlJlVwGmShRyRyXcQfPiMzMzEqAaGnKvQsNiWbOmJhKfSxAvJwGqIvRuFiRkYxTgOuBpBiEpRpAwIhCbDlNhUdOkQeXzZeUtHaMsAkMsAvHfOjJcAoXiWkXxEtDyWpLfEfLrRsRfKvZjRmNrYzRoXzMnRrKpXl</value>
-    </row>
-    <row>
-        <value description="idf">-2</value>
-        <value description="Datum">2009-04-15</value>
-        <value description="Iznos">JySaGgTiDbTgMtWqJwNaUhMmOfDqRaKiZhVvMiZfQzPzYtQqLdVsLkItZrTsStVuPgHwZoRoWeTcHrXjUsNsLnRuKmLuQbRjBjLjZdTnMwJzYxFgHeFbBoSgSkKjIzXqPfGiPeXiAqFsLlFbWjYmDnIwQfElNeKmPrLzMuViGkHoOlFwKjHsIjGmXmQuRnAbGqDgSyYlXfOyJjGkKzHfUmCwKvPnTiHjSdIrCfHaItBoYxIqEeTfVzCiOfJtHoE</value>
-        <value description="FK_K">-2</value>
-        <value description="Napomena">PdLeHmYsRsSbSxSsHjCbPzOsDcSqPuMgLoOyEoRbNjWuXoVtDoCwQmLtIcLtMlKxShYrPqTcOjObUdXvCcAhNqUoXbNcMwUzKhNwJzDePhRlDfZnWkZeHtYnBmTtEiPrOdYmIeQkZlOmIoNzQdXvBcMyXnDiSzSkYxYaEwEfWdIgYyMwCbZsIiXwDyThUrZiOnBgMnNs</value>
-    </row>
-    <row>
-        <value description="idf">-3</value>
-        <value description="Datum">2009-04-15</value>
-        <value description="Iznos">VfJePsTzRxTtWzFnDlAiLrDvMgVuCxFvGyDaBxYsGmWmJfEtMaBxNxClDmRbNfMgQgIiPgGlQaVvYbDuJrHkYeQsQvQqWaUyQtZuSeScVyDvFnDgKkMbQxCtKgCqVzMuKqAaVwNgEuQxHgZkXlVmIaOsCtNmCePjPiEwNxXjXeCyNjXtYuIlAaCoRaYwSmYeAsZkTzXbZjDgQlHqEtMnEgGiAqGzAgPbBiZpTzQxXzDdIwNkOzHnVuCfGcAcSiN</value>
-        <value description="FK_K">-3</value>
-        <value description="Napomena">RaBhEpZuLgRvCwKnRlUhUfCbHyOnDaDjOxYlNlBeGbMtHxZaSyNzYhDkHaNsSmBqFiGjCyVvOoDbXxSjGmGnPzXrUiWbMlIbMrYrXtMbTgTvHhJpPpUqVeYpHdEyJkVgCsBiIlCaLhRcViSqUcZvJkEcBdEwQbEpTdRdCrBiSsUtMxMvDkYrHmFtVpPmNdLjDqZcTlXz</value>
-    </row>
-    </table>
-    <!--Faktura-END-->
-    <!--Klijent-START-->
-    <table name="klijent">
-        <column>idk</column>
-        <column>Adresa</column>
-        <column>Mesto</column>
-        <column>Naziv</column>
-        <column>Telefon</column>
-    <row>
-        <value description="idk">-1</value>
-        <value description="Adresa">ObCqQnSvQaHdIvZkRzUzWwDkTnDnQsHhOkRxZzVvXfTaP</value>
-        <value description="Mesto">KrYsQqFlCcRsPiZhTxBcQdJfQ</value>
-        <value description="Naziv">CsTdGcVnByQsJpBpNsCxYvWkZpBmYrGyHbJmHkUqXxLzS</value>
-        <value description="Telefon">IuWcTyXiZzFkXtG</value>
-    </row>
-    <row>
-        <value description="idk">-2</value>
-        <value description="Adresa">EcOuXmHqVfAtGoQcQyQnFgWjBdKcRfWbKhSdSnRePgMiV</value>
-        <value description="Mesto">CcPnSqRdNsHcIdVbUeXpIbAvS</value>
-        <value description="Naziv">FkEzEoYqBmBjJjNnIiHbUeVbBkNxCuRfXjUcWxHzOqWtQ</value>
-        <value description="Telefon">OfYrDxHzVzZkPcZ</value>
-    </row>
-    <row>
-        <value description="idk">-3</value>
-        <value description="Adresa">NnPfPvVmLzIqSfWfLeKjIdVaEyZpYxFkYuIeCrJfFjPyV</value>
-        <value description="Mesto">GmYiJqYwRmZqSwZmMtXtNaQjP</value>
-        <value description="Naziv">XxOcOqFrJkMfSeYzNnTjSfSwVpBkKzByPfSdLoSnEmVoE</value>
-        <value description="Telefon">VjZiYqFdWdOhEgE</value>
-    </row>
-    </table>
-    <!--Klijent-END-->
     <!--Roba-START-->
     <table name="roba">
         <column>idr</column>
@@ -210,6 +120,96 @@
     </row>
     </table>
     <!--Roba-END-->
+    <!--Klijent-START-->
+    <table name="klijent">
+        <column>idk</column>
+        <column>Adresa</column>
+        <column>Mesto</column>
+        <column>Naziv</column>
+        <column>Telefon</column>
+    <row>
+        <value description="idk">-1</value>
+        <value description="Adresa">ObCqQnSvQaHdIvZkRzUzWwDkTnDnQsHhOkRxZzVvXfTaP</value>
+        <value description="Mesto">KrYsQqFlCcRsPiZhTxBcQdJfQ</value>
+        <value description="Naziv">CsTdGcVnByQsJpBpNsCxYvWkZpBmYrGyHbJmHkUqXxLzS</value>
+        <value description="Telefon">IuWcTyXiZzFkXtG</value>
+    </row>
+    <row>
+        <value description="idk">-2</value>
+        <value description="Adresa">EcOuXmHqVfAtGoQcQyQnFgWjBdKcRfWbKhSdSnRePgMiV</value>
+        <value description="Mesto">CcPnSqRdNsHcIdVbUeXpIbAvS</value>
+        <value description="Naziv">FkEzEoYqBmBjJjNnIiHbUeVbBkNxCuRfXjUcWxHzOqWtQ</value>
+        <value description="Telefon">OfYrDxHzVzZkPcZ</value>
+    </row>
+    <row>
+        <value description="idk">-3</value>
+        <value description="Adresa">NnPfPvVmLzIqSfWfLeKjIdVaEyZpYxFkYuIeCrJfFjPyV</value>
+        <value description="Mesto">GmYiJqYwRmZqSwZmMtXtNaQjP</value>
+        <value description="Naziv">XxOcOqFrJkMfSeYzNnTjSfSwVpBkKzByPfSdLoSnEmVoE</value>
+        <value description="Telefon">VjZiYqFdWdOhEgE</value>
+    </row>
+    </table>
+    <!--Klijent-END-->
+    <!--Faktura-START-->
+    <table name="faktura">
+        <column>idf</column>
+        <column>Datum</column>
+        <column>Iznos</column>
+        <column>FK_K</column>    
+        <column>Napomena</column>
+    <row>
+        <value description="idf">-1</value>
+        <value description="Datum">2009-04-15</value>
+        <value description="Iznos">11.11</value>
+        <value description="FK_K">-1</value>
+        <value description="Napomena">KwMbQjTnTgUqBiDxDlAgLlFoEoSfBqGkMqHyCoNpQyHlJlVwGmShRyRyXcQfPiMzMzEqAaGnKvQsNiWbOmJhKfSxAvJwGqIvRuFiRkYxTgOuBpBiEpRpAwIhCbDlNhUdOkQeXzZeUtHaMsAkMsAvHfOjJcAoXiWkXxEtDyWpLfEfLrRsRfKvZjRmNrYzRoXzMnRrKpXl</value>
+    </row>
+    <row>
+        <value description="idf">-2</value>
+        <value description="Datum">2009-04-15</value>
+        <value description="Iznos">22.22</value>
+        <value description="FK_K">-2</value>
+        <value description="Napomena">PdLeHmYsRsSbSxSsHjCbPzOsDcSqPuMgLoOyEoRbNjWuXoVtDoCwQmLtIcLtMlKxShYrPqTcOjObUdXvCcAhNqUoXbNcMwUzKhNwJzDePhRlDfZnWkZeHtYnBmTtEiPrOdYmIeQkZlOmIoNzQdXvBcMyXnDiSzSkYxYaEwEfWdIgYyMwCbZsIiXwDyThUrZiOnBgMnNs</value>
+    </row>
+    <row>
+        <value description="idf">-3</value>
+        <value description="Datum">2009-04-15</value>
+        <value description="Iznos">33.33</value>
+        <value description="FK_K">-3</value>
+        <value description="Napomena">RaBhEpZuLgRvCwKnRlUhUfCbHyOnDaDjOxYlNlBeGbMtHxZaSyNzYhDkHaNsSmBqFiGjCyVvOoDbXxSjGmGnPzXrUiWbMlIbMrYrXtMbTgTvHhJpPpUqVeYpHdEyJkVgCsBiIlCaLhRcViSqUcZvJkEcBdEwQbEpTdRdCrBiSsUtMxMvDkYrHmFtVpPmNdLjDqZcTlXz</value>
+    </row>
+    </table>
+    <!--Faktura-END-->
+    <!--Stavke-START-->
+    <table name="stavke">
+        <column>ids</column>
+        <column>FK_F</column>    
+        <column>Kolicina</column>
+        <column>Napomena</column>
+        <column>FK_R</column>    
+    <row>
+        <value description="ids">-1</value>
+        <value description="FK_F">-1</value>
+        <value description="Kolicina">11.11</value>
+        <value description="Napomena">VbXeKhHbGvYcFpD</value>
+        <value description="FK_R">-1</value>
+    </row>
+    <row>
+        <value description="ids">-2</value>
+        <value description="FK_F">-2</value>
+        <value description="Kolicina">22.22</value>
+        <value description="Napomena">GrCrCiSkYyPhXeY</value>
+        <value description="FK_R">-2</value>
+    </row>
+    <row>
+        <value description="ids">-3</value>
+        <value description="FK_F">-3</value>
+        <value description="Kolicina">33.33</value>
+        <value description="Napomena">QwKgEzCvOmIfQpK</value>
+        <value description="FK_R">-3</value>
+    </row>
+    </table>
+    <!--Stavke-END-->
 </dataset>
 
 

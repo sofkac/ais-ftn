@@ -1,17 +1,17 @@
 package edu.ftn.ais.service.impl;
 
+import static org.junit.Assert.assertSame;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jmock.Expectations;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 import edu.ftn.ais.dao.KlijentDao;
 import edu.ftn.ais.model.Klijent;
-import edu.ftn.ais.service.impl.BaseManagerMockTestCase;
-
-import org.jmock.Expectations;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class KlijentManagerImplTest extends BaseManagerMockTestCase {
     private KlijentManagerImpl manager = null;

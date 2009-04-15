@@ -1,11 +1,12 @@
 package edu.ftn.ais.webapp.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
-import edu.ftn.ais.service.RobaManager;
-import edu.ftn.ais.model.Roba;
-import edu.ftn.ais.webapp.action.BaseActionTestCase;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import edu.ftn.ais.model.Roba;
+import edu.ftn.ais.service.RobaManager;
 
 public class RobaActionTest extends BaseActionTestCase {
     private RobaAction action;
@@ -22,7 +23,7 @@ public class RobaActionTest extends BaseActionTestCase {
 
         // enter all required fields
         roba.setJm("LeNlCaPkUa");
-        roba.setKolicina(2.5187448674213138E8L);
+        roba.setKolicina(251874486742131388L);
         roba.setNaziv("EgQsKbDyLaYwPaPbEcEqDhBfQpAwZcGxTnZlHaFuIfSoRiAkXk");
 
         robaManager.save(roba);
@@ -52,7 +53,7 @@ public class RobaActionTest extends BaseActionTestCase {
         Roba roba = action.getRoba();
         // update required fields
         roba.setJm("EcZfFxXqBa");
-        roba.setKolicina(7.661785500696265E8L);
+        roba.setKolicina(76617855006962658L);
         roba.setNaziv("MgXoFuAfSuYlFuGaHxZiEhXeOqVxKuBjQaPdUzLiNrPrBjBoSe");
 
         action.setRoba(roba);

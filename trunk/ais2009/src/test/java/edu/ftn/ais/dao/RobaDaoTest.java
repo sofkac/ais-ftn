@@ -1,10 +1,8 @@
 package edu.ftn.ais.dao;
 
-import edu.ftn.ais.dao.BaseDaoTestCase;
-import edu.ftn.ais.model.Roba;
 import org.springframework.dao.DataAccessException;
 
-import java.util.List;
+import edu.ftn.ais.model.Roba;
 
 public class RobaDaoTest extends BaseDaoTestCase {
     private RobaDao robaDao;
@@ -18,7 +16,7 @@ public class RobaDaoTest extends BaseDaoTestCase {
 
         // enter all required fields
         roba.setJm("VgAgWsJnRp");
-        roba.setKolicina(4.2260983512125903E8L);
+        roba.setKolicina(422609835121259038L);
         roba.setNaziv("VdHxJxOrCxAfGgXqLcVjSuNsQlWfClYvGmOhVlMbWbKtCjCePl");
 
         log.debug("adding roba...");

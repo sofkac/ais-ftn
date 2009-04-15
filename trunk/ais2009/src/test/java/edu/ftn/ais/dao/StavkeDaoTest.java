@@ -1,10 +1,10 @@
 package edu.ftn.ais.dao;
 
-import edu.ftn.ais.dao.BaseDaoTestCase;
-import edu.ftn.ais.model.Stavke;
+import java.math.BigDecimal;
+
 import org.springframework.dao.DataAccessException;
 
-import java.util.List;
+import edu.ftn.ais.model.Stavke;
 
 public class StavkeDaoTest extends BaseDaoTestCase {
     private StavkeDao stavkeDao;
@@ -17,7 +17,7 @@ public class StavkeDaoTest extends BaseDaoTestCase {
         Stavke stavke = new Stavke();
 
         // enter all required fields
-        stavke.setKolicina("YoBtKkAySjJzVmVsUvVpDtUiQzGiToFbPsQrFgIwVuDrXjWwEqBcGuYtNfCiSyPcDdApBrRiVsJhGxSbRiYvVoEwCyMqUcHbAdHcFwWiTtAwNiTdRxPvOrWvCiRlFfGoJyGgKzVbQkLkFzZsYnUkUiGxHpLwKfNmUlWzKzNjToRkMoDbGmOjTmYxKnPyIyYkTkOxCmYrFlQjMuGzMeTgGjTgIsCuSlKgFnKpPxUnAmRwZsHgQsYiKmTxOjAcBrA");
+        stavke.setKolicina(new BigDecimal("11.11"));
 
         log.debug("adding stavke...");
         stavke = stavkeDao.save(stavke);

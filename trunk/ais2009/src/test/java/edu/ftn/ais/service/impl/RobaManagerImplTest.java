@@ -1,17 +1,17 @@
 package edu.ftn.ais.service.impl;
 
+import static org.junit.Assert.assertSame;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jmock.Expectations;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 import edu.ftn.ais.dao.RobaDao;
 import edu.ftn.ais.model.Roba;
-import edu.ftn.ais.service.impl.BaseManagerMockTestCase;
-
-import org.jmock.Expectations;
-import org.junit.Before;
-import org.junit.After;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class RobaManagerImplTest extends BaseManagerMockTestCase {
     private RobaManagerImpl manager = null;
@@ -68,7 +68,7 @@ public class RobaManagerImplTest extends BaseManagerMockTestCase {
         final Roba roba = new Roba();
         // enter all required fields
         roba.setJm("UaKlYsVaFm");
-        roba.setKolicina(1.5858448516606665E9L);
+        roba.setKolicina(158584485166066659L);
         roba.setNaziv("ViClYuVwCfFhZoGhKnHrOcTlWfBfEaQuVrLjSiQeWoOtKfZeCx");
         
         // set expected behavior on dao

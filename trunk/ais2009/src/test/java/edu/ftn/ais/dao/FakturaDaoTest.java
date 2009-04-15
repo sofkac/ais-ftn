@@ -1,10 +1,8 @@
 package edu.ftn.ais.dao;
 
-import edu.ftn.ais.dao.BaseDaoTestCase;
-import edu.ftn.ais.model.Faktura;
 import org.springframework.dao.DataAccessException;
 
-import java.util.List;
+import edu.ftn.ais.model.Faktura;
 
 public class FakturaDaoTest extends BaseDaoTestCase {
     private FakturaDao fakturaDao;
