@@ -1,23 +1,13 @@
 package edu.ftn.ais.model;
 
-import edu.ftn.ais.model.BaseObject;
+import java.io.Serializable;
 
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-
-import java.io.Serializable;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="roba",catalog="ais2009")
@@ -27,9 +17,9 @@ public class Roba extends BaseObject implements Serializable {
     private Long kolicina;
     private String jm;
     private String napomena;
-    private Set<Stavke> stavkes = new HashSet<Stavke>(0);
+//    private Set<Stavke> stavkes = new HashSet<Stavke>(0);
 
-    @Id @GeneratedValue(strategy=IDENTITY) @GeneratedValue(strategy = GenerationType.AUTO)    
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)    
     public Long getIdr() {
         return this.idr;
     }
@@ -73,14 +63,14 @@ public class Roba extends BaseObject implements Serializable {
     public void setNapomena(String napomena) {
         this.napomena = napomena;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="roba")
-    public Set<Stavke> getStavkes() {
-        return this.stavkes;
-    }
+//@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="roba")
+//    public Set<Stavke> getStavkes() {
+//        return this.stavkes;
+//    }
     
-    public void setStavkes(Set<Stavke> stavkes) {
-        this.stavkes = stavkes;
-    }
+//    public void setStavkes(Set<Stavke> stavkes) {
+//        this.stavkes = stavkes;
+//    }
 
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -5,5 +5,9 @@
     <session-factory>
         <mapping class="edu.ftn.ais.model.User"/>
         <mapping class="edu.ftn.ais.model.Role"/>
+        <mapping class="edu.ftn.ais.model.Stavke"/>
+        <mapping class="edu.ftn.ais.model.Faktura"/>
+        <mapping class="edu.ftn.ais.model.Klijent"/>
+        <mapping class="edu.ftn.ais.model.Roba"/>
     </session-factory>
 </hibernate-configuration>

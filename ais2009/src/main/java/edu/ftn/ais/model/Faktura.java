@@ -1,29 +1,20 @@
 package edu.ftn.ais.model;
 
-import edu.ftn.ais.model.BaseObject;
-
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
-import java.io.Serializable;
 
 @Entity
 @Table(name="faktura",catalog="ais2009")
@@ -33,9 +24,9 @@ public class Faktura extends BaseObject implements Serializable {
     private Date datum;
     private BigDecimal iznos;
     private String napomena;
-    private Set<Stavke> stavkes = new HashSet<Stavke>(0);
+//    private Set<Stavke> stavkes = new HashSet<Stavke>(0);
 
-    @Id @GeneratedValue(strategy=IDENTITY) @GeneratedValue(strategy = GenerationType.AUTO)    
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)    
     public Long getIdf() {
         return this.idf;
     }
@@ -43,7 +34,7 @@ public class Faktura extends BaseObject implements Serializable {
     public void setIdf(Long idf) {
         this.idf = idf;
     }
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="FK_K", nullable=false)
     public Klijent getKlijent() {
         return this.klijent;
@@ -79,14 +70,14 @@ public class Faktura extends BaseObject implements Serializable {
     public void setNapomena(String napomena) {
         this.napomena = napomena;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="faktura")
-    public Set<Stavke> getStavkes() {
-        return this.stavkes;
-    }
+//@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="faktura")
+//    public Set<Stavke> getStavkes() {
+//        return this.stavkes;
+//    }
     
-    public void setStavkes(Set<Stavke> stavkes) {
-        this.stavkes = stavkes;
-    }
+//    public void setStavkes(Set<Stavke> stavkes) {
+//        this.stavkes = stavkes;
+//    }
 
     public boolean equals(Object o) {
         if (this == o) return true;

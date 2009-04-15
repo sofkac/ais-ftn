@@ -1,21 +1,13 @@
 package edu.ftn.ais.model;
 
-import edu.ftn.ais.model.BaseObject;
+import java.io.Serializable;
 
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-
-import java.io.Serializable;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="klijent",catalog="ais2009")
@@ -25,7 +17,7 @@ public class Klijent extends BaseObject implements Serializable {
     private String adresa;
     private String mesto;
     private String telefon;
-    private Set<Faktura> fakturas = new HashSet<Faktura>(0);
+//    private Set<Faktura> fakturas = new HashSet<Faktura>(0);
 
     @Id  @GeneratedValue(strategy = GenerationType.AUTO)    
     public Long getIdk() {
@@ -71,14 +63,14 @@ public class Klijent extends BaseObject implements Serializable {
     public void setTelefon(String telefon) {
         this.telefon = telefon;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="klijent")
-    public Set<Faktura> getFakturas() {
-        return this.fakturas;
-    }
+//@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="klijent")
+//    public Set<Faktura> getFakturas() {
+//        return this.fakturas;
+//    }
     
-    public void setFakturas(Set<Faktura> fakturas) {
-        this.fakturas = fakturas;
-    }
+//    public void setFakturas(Set<Faktura> fakturas) {
+//        this.fakturas = fakturas;
+//    }
 
     public boolean equals(Object o) {
         if (this == o) return true;
