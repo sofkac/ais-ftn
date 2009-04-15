@@ -1,0 +1,23 @@
+=Frameworks=
+  * Hibernate
+  * Spring
+  * Struts2
+  * AJAX
+  * JUnit
+  * Canoo Web Test
+  * Jasper Reports
+=Development Environment=
+  * Java v1.6
+  * DB - MySQL v5.1.32
+  * maven
+  * SVN
+  * Eclipse
+=J2EE Arhitektura, layers=
+  * POJO
+  * Persistance
+    * DAO pattern
+  * Business layer, service
+    * Managers
+    * Web services
+  * Presentation, web layer
+    * MVC pattern
