@@ -1,22 +1,17 @@
 package edu.ftn.ais.model;
 
-import edu.ftn.ais.model.BaseObject;
-
+import java.io.Serializable;
 import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
-import java.io.Serializable;
 
 @Entity
 @Table(name="stavke",catalog="ais2009")
@@ -27,7 +22,7 @@ public class Stavke extends BaseObject implements Serializable {
     private BigDecimal kolicina;
     private String napomena;
 
-    @Id @GeneratedValue(strategy=IDENTITY) @GeneratedValue(strategy = GenerationType.AUTO)    
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)    
     public Long getIds() {
         return this.ids;
     }
@@ -35,7 +30,7 @@ public class Stavke extends BaseObject implements Serializable {
     public void setIds(Long ids) {
         this.ids = ids;
     }
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="FK_R", nullable=false)
     public Roba getRoba() {
         return this.roba;
@@ -44,7 +39,7 @@ public class Stavke extends BaseObject implements Serializable {
     public void setRoba(Roba roba) {
         this.roba = roba;
     }
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="FK_F", nullable=false)
     public Faktura getFaktura() {
         return this.faktura;
