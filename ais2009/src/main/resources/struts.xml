@@ -108,6 +108,78 @@
             <result name="success">/</result>
         </action>
 
+        <!--StavkeAction-START-->
+        <action name="stavkes" class="edu.ftn.ais.webapp.action.StavkeAction" method="list">
+            <result>/WEB-INF/pages/stavkeList.jsp</result>
+        </action>
+
+        <action name="editStavke" class="edu.ftn.ais.webapp.action.StavkeAction" method="edit">
+            <result>/WEB-INF/pages/stavkeForm.jsp</result>
+            <result name="error">/WEB-INF/pages/stavkeList.jsp</result>
+        </action>
+
+        <action name="saveStavke" class="edu.ftn.ais.webapp.action.StavkeAction" method="save">
+            <result name="input">/WEB-INF/pages/stavkeForm.jsp</result>
+            <result name="cancel" type="redirect-action">stavkes</result>
+            <result name="delete" type="redirect-action">stavkes</result>
+            <result name="success" type="redirect-action">stavkes</result>
+        </action>
+        <!--StavkeAction-END-->
+
+        <!--FakturaAction-START-->
+        <action name="fakturas" class="edu.ftn.ais.webapp.action.FakturaAction" method="list">
+            <result>/WEB-INF/pages/fakturaList.jsp</result>
+        </action>
+
+        <action name="editFaktura" class="edu.ftn.ais.webapp.action.FakturaAction" method="edit">
+            <result>/WEB-INF/pages/fakturaForm.jsp</result>
+            <result name="error">/WEB-INF/pages/fakturaList.jsp</result>
+        </action>
+
+        <action name="saveFaktura" class="edu.ftn.ais.webapp.action.FakturaAction" method="save">
+            <result name="input">/WEB-INF/pages/fakturaForm.jsp</result>
+            <result name="cancel" type="redirect-action">fakturas</result>
+            <result name="delete" type="redirect-action">fakturas</result>
+            <result name="success" type="redirect-action">fakturas</result>
+        </action>
+        <!--FakturaAction-END-->
+
+        <!--KlijentAction-START-->
+        <action name="klijents" class="edu.ftn.ais.webapp.action.KlijentAction" method="list">
+            <result>/WEB-INF/pages/klijentList.jsp</result>
+        </action>
+
+        <action name="editKlijent" class="edu.ftn.ais.webapp.action.KlijentAction" method="edit">
+            <result>/WEB-INF/pages/klijentForm.jsp</result>
+            <result name="error">/WEB-INF/pages/klijentList.jsp</result>
+        </action>
+
+        <action name="saveKlijent" class="edu.ftn.ais.webapp.action.KlijentAction" method="save">
+            <result name="input">/WEB-INF/pages/klijentForm.jsp</result>
+            <result name="cancel" type="redirect-action">klijents</result>
+            <result name="delete" type="redirect-action">klijents</result>
+            <result name="success" type="redirect-action">klijents</result>
+        </action>
+        <!--KlijentAction-END-->
+
+        <!--RobaAction-START-->
+        <action name="robas" class="edu.ftn.ais.webapp.action.RobaAction" method="list">
+            <result>/WEB-INF/pages/robaList.jsp</result>
+        </action>
+
+        <action name="editRoba" class="edu.ftn.ais.webapp.action.RobaAction" method="edit">
+            <result>/WEB-INF/pages/robaForm.jsp</result>
+            <result name="error">/WEB-INF/pages/robaList.jsp</result>
+        </action>
+
+        <action name="saveRoba" class="edu.ftn.ais.webapp.action.RobaAction" method="save">
+            <result name="input">/WEB-INF/pages/robaForm.jsp</result>
+            <result name="cancel" type="redirect-action">robas</result>
+            <result name="delete" type="redirect-action">robas</result>
+            <result name="success" type="redirect-action">robas</result>
+        </action>
+        <!--RobaAction-END-->
+
         <!-- Add additional actions here -->
     </package>
 
