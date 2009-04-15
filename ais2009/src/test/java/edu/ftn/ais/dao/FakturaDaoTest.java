@@ -6,14 +6,23 @@ import edu.ftn.ais.model.Faktura;
 
 public class FakturaDaoTest extends BaseDaoTestCase {
     private FakturaDao fakturaDao;
+    private KlijentDao klijentDao;
 
     public void setFakturaDao(FakturaDao fakturaDao) {
         this.fakturaDao = fakturaDao;
     }
 
+    public void setKlijentDao(KlijentDao klijentDao) {
+        this.klijentDao = klijentDao;
+    }
+
     public void testAddAndRemoveFaktura() throws Exception {
         Faktura faktura = new Faktura();
 
+        //added by neso
+        faktura.setKlijent(klijentDao.get(-1L));
+        //end
+        
         // enter all required fields
         faktura.setDatum(new java.util.Date());
 

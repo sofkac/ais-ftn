@@ -8,23 +8,34 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import com.opensymphony.xwork2.ActionSupport;
 
 import edu.ftn.ais.model.Stavke;
+import edu.ftn.ais.service.FakturaManager;
+import edu.ftn.ais.service.RobaManager;
 import edu.ftn.ais.service.StavkeManager;
 
 public class StavkeActionTest extends BaseActionTestCase {
     private StavkeAction action;
 
-    @Override @SuppressWarnings("unchecked")
+	@Override
+	@SuppressWarnings("unchecked")
     protected void onSetUpBeforeTransaction() throws Exception {
         super.onSetUpBeforeTransaction();
         action = new StavkeAction();
         StavkeManager stavkeManager = (StavkeManager) applicationContext.getBean("stavkeManager");
         action.setStavkeManager(stavkeManager);
     
+		// added by neso
+		FakturaManager fakturaManager = (FakturaManager) applicationContext.getBean("fakturaManager");
+		RobaManager robaManager = (RobaManager) applicationContext.getBean("robaManager");
+		//end
+
         // add a test stavke to the database
         Stavke stavke = new Stavke();
 
         // enter all required fields
         stavke.setKolicina(new BigDecimal("11.11"));
+
+		stavke.setRoba(robaManager.get(-1L));
+		stavke.setFaktura(fakturaManager.get(-1L));
 
         stavkeManager.save(stavke);
     }
