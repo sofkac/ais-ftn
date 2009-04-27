@@ -8,13 +8,24 @@ import java.util.List;
 
 public class ZaposleniDaoTest extends BaseDaoTestCase {
     private ZaposleniDao zaposleniDao;
+    private ZanimanjeDao zanimanjeDao;//added by Sofija
 
     public void setZaposleniDao(ZaposleniDao zaposleniDao) {
         this.zaposleniDao = zaposleniDao;
     }
-
+    
+    //added by Sofija
+     public void setZanimanjeDao(ZanimanjeDao zanimanjeDao) {
+        this.zanimanjeDao = zanimanjeDao;
+    }
+    //end
+    
     public void testAddAndRemoveZaposleni() throws Exception {
         Zaposleni zaposleni = new Zaposleni();
+        
+        //added by Sofija
+        zaposleni.setZanimanje(zanimanjeDao.get(-1L));
+        //end
 
         // enter all required fields
         zaposleni.setAdrz("NoUxJgCrWwSiOfZnTnKzXcFtQkKyFyYcHzJpShKcAiVxXwNhKt");
