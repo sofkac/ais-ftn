@@ -23,7 +23,8 @@ import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 @Entity
-@Table(name="zaposleni",catalog="evidencija", uniqueConstraints = @UniqueConstraint(columnNames="jmbz") )
+//@Table(name="zaposleni",catalog="evidencija", uniqueConstraints = @UniqueConstraint(columnNames="jmbz") )
+@Table(name="zaposleni",catalog="evidencija" )
 public class Zaposleni extends BaseObject implements Serializable {
     private Long idz;
     private Zanimanje zanimanje;

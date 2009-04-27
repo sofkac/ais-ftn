@@ -30,7 +30,9 @@ public class ZaposleniActionTest extends BaseActionTestCase {
         zaposleni.setAdrz("KmIbBvVvWxIjOqMtSpElPnVrOjHkUmXjExKnXvCiFyAqNcGzKy");
         zaposleni.setGradz("KlJhRdIqIwPvIgAfYwPi");
         zaposleni.setImez("UhWlSeBsIqRqSeRgJxIk");
-        zaposleni.setJmbz("" + Math.random());
+        //added by neso
+        String tmpJmbz = (""+ Math.random()).substring(0, 12);
+        zaposleni.setJmbz(tmpJmbz);
         zaposleni.setMailz("TiRvHpMgJdYhCtBdHoCjJbHzOxRnDgZvIgJsRiEkAkKaBpUdHx");
         zaposleni.setPrzz("SsWbYuFlVkTrCeHmFvUt");
         zaposleni.setTelz("TeErMkEhHfWmIcP");
