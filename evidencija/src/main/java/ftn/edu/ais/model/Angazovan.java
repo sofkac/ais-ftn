@@ -45,7 +45,7 @@ public class Angazovan extends BaseObject implements Serializable {
     public Pripada getPripada() {
         return this.pripada;
     }
-    
+
     public void setPripada(Pripada pripada) {
         this.pripada = pripada;
     }
@@ -78,7 +78,6 @@ public class Angazovan extends BaseObject implements Serializable {
         sb.append("zaposleni").append("='").append(getZaposleni()).append("', ");
         sb.append("pripada").append("='").append(getPripada()).append("'");
         sb.append("]");
-      
         return sb.toString();
     }
 
