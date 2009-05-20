@@ -1,7 +1,7 @@
 =Development=
 -----
 == Persistence ==
-    * Development
+    * <font color="red">Development</font>
       * POJO
         * Generating
         * Annotation
@@ -19,23 +19,23 @@
       * validation
         * server
         * client
-    * Additional logic
+    * <font color="red">Additional logic</font>
       * Faktura list
         * Klijents
       * Stavke form
         * preko fakture - master-detail
     * Customization
-      * css
+      * <font color="red">css</font>
       * JasperReports
       * pages
         * error pages
-      * i18n - resources
-      * Menu
+      * <font color="red">i18n - resources</font>
+      * <font color="red">Menu</font>
       * Date picker
       * Error handling
 == Testing TDD ==
     * DB test
-      * sample-data.xml, RI
+      * <font color="red">sample-data.xml, RI</font>
     * Unit
       * DAO
       * Action
