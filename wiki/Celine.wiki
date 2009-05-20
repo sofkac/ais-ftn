@@ -1,19 +1,20 @@
 -----
 =Frameworks=
-  * Hibernate
-  * Spring
-  * Struts2
+  * <font color="red">Hibernate</font>
+  * <font color="red">Spring</font>
+  * <font color="red">Struts2</font>
   * AJAX
-  * JUnit
-  * Canoo Web Test
+  * <font color="red">Test frameworks</font>
+    * JUnit
+    * Canoo Web Test
   * Jasper Reports
 =Development Environment=
   * Java v1.6
   * DB - MySQL v5.1.32
-  * maven
-  * SVN
-  * Eclipse
-=J2EE Architecture, layers=
+  * <font color="red">maven</font>
+  * <font color="red">SVN</font>
+  * <font color="red">Eclipse</font>
+=<font color="red">J2EE Architecture</font>, layers=
   * POJO
   * Persistance
     * DAO pattern
