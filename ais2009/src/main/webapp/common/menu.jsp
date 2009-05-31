@@ -6,8 +6,9 @@
     <c:if test="${empty pageContext.request.remoteUser}"><li><a href="<c:url value="/login.jsp"/>" class="current"><fmt:message key="login.title"/></a></li></c:if>
     <menu:displayMenu name="MainMenu"/>
     <menu:displayMenu name="UserMenu"/>
-    <menu:displayMenu name="AdminMenu"/>
     <menu:displayMenu name="ApplicationMenu"/>
+    <menu:displayMenu name="AdminMenu"/>
+    <menu:displayMenu name="WebServices"/>
     <menu:displayMenu name="Logout"/>
     <!--Stavke-START-->
 <!--    <menu:displayMenu name="StavkeMenu"/>-->
