@@ -9,8 +9,8 @@
     <li style="display: none">
         <s:hidden key="stavke.ids"/>
     </li>
-    <s:select key="stavke.faktura" name="stavke.faktura.idf" list="fakturas" headerKey="-10" headerValue="--Select Faktura--" listKey="idf" listValue="idf"></s:select>
-    <s:select key="stavke.roba" name="stavke.roba.idr" headerKey="-10" headerValue="--Select Roba--" list="robas" listKey="idr" listValue="naziv"></s:select>
+    <s:select key="stavke.faktura" name="stavke.faktura.idf" list="fakturas" headerKey="-10" headerValue="--Select Faktura--" listKey="idf" listValue="idf+' '+klijent.naziv+' '+iznos+' '+napomena"></s:select>
+    <s:select key="stavke.roba" name="stavke.roba.idr" headerKey="-10" headerValue="--Select Roba--" list="robas" listKey="idr" listValue="naziv+' - ' +kolicina"></s:select>
     <s:textfield key="stavke.kolicina" required="true" maxlength="255" cssClass="text medium"/>
     <s:textfield key="stavke.napomena" required="false" maxlength="15" cssClass="text medium"/>
 

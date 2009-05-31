@@ -9,6 +9,9 @@
     <li style="display: none">
         <s:hidden key="faktura.idf"/>
     </li>
+    <c:if test="${not empty faktura.idf}">
+ 		<s:textfield disabled="true" readonly="true" key="faktura.idf" maxlength="5" size="5" />
+    </c:if>
     <s:select key="faktura.klijent" name="faktura.klijent.idk" list="klijents" listKey="idk" listValue="naziv"></s:select>
     <s:textfield key="faktura.datum" required="true" cssClass="text medium"/>
     <s:textfield key="faktura.iznos" required="false" maxlength="255" cssClass="text medium"/>
