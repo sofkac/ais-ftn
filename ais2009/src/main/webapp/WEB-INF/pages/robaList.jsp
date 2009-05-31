@@ -3,7 +3,7 @@
 <head>
     <title><fmt:message key="robaList.title"/></title>
     <meta name="heading" content="<fmt:message key='robaList.heading'/>"/>
-    <meta name="menu" content="RobaMenu"/>
+    <meta name="menu" content="ApplicationMenu"/>
 </head>
 
 <c:set var="buttons">

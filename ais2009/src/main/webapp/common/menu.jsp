@@ -10,17 +10,6 @@
     <menu:displayMenu name="AdminMenu"/>
     <menu:displayMenu name="WebServices"/>
     <menu:displayMenu name="Logout"/>
-    <!--Stavke-START-->
-<!--    <menu:displayMenu name="StavkeMenu"/>-->
-    <!--Stavke-END-->
-    <!--Faktura-START-->
-<!--    <menu:displayMenu name="FakturaMenu"/>-->
-    <!--Faktura-END-->
-    <!--Klijent-START-->
-<!--    <menu:displayMenu name="KlijentMenu"/>-->
-    <!--Klijent-END-->
-    <!--Roba-START-->
-<!--    <menu:displayMenu name="RobaMenu"/>-->
-    <!--Roba-END-->
+
 </ul>
 </menu:useMenuDisplayer>

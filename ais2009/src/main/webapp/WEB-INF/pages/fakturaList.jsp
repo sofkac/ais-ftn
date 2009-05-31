@@ -3,7 +3,7 @@
 <head>
     <title><fmt:message key="fakturaList.title"/></title>
     <meta name="heading" content="<fmt:message key='fakturaList.heading'/>"/>
-    <meta name="menu" content="FakturaMenu"/>
+    <meta name="menu" content="ApplicationMenu"/>
 </head>
 
 <c:set var="buttons">

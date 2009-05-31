@@ -23,17 +23,18 @@
         <Menu name="WebServices" title="menu.webservices.title" page="/services" roles="ROLE_ADMIN">
         </Menu>
         <Menu name="Logout" title="user.logout" page="/logout.jsp" roles="ROLE_ADMIN,ROLE_USER"/>
+
         <!--Stavke-START-->
-<!--        <Menu name="StavkeMenu" title="stavkeList.title" page="/stavkes.html"/>-->
+<!--        <Menu name="StavkeMenu" title="stavkeList.title" page="/stavkes.html"/> -->
         <!--Stavke-END-->
         <!--Faktura-START-->
-<!--        <Menu name="FakturaMenu" title="fakturaList.title" page="/fakturas.html"/>-->
+<!--        <Menu name="FakturaMenu" title="fakturaList.title" page="/fakturas.html"/> -->
         <!--Faktura-END-->
         <!--Roba-START-->
-<!--        <Menu name="RobaMenu" title="robaList.title" page="/robas.html"/>-->
+<!--        <Menu name="RobaMenu" title="robaList.title" page="/robas.html"/> -->
         <!--Roba-END-->
         <!--Klijent-START-->
-<!--        <Menu name="KlijentMenu" title="klijentList.title" page="/klijents.html"/>-->
+<!--        <Menu name="KlijentMenu" title="klijentList.title" page="/klijents.html"/> -->
         <!--Klijent-END-->
     </Menus>
 </MenuConfig>
