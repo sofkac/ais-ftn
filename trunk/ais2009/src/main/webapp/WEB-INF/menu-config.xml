@@ -14,18 +14,26 @@
             <Item name="FlushCache" title="menu.flushCache" page="/admin/flushCache.html"/>
             <Item name="Clickstream" title="menu.clickstream" page="/admin/clickstreams.jsp"/>
         </Menu>
+        <Menu name="ApplicationMenu" title="menu.application.title" description="Application menu" roles="ROLE_USER" width="120" page="#">
+			<Item name="KlijentMenu" title="klijentList.title" page="/klijents.html"/>
+			<Item name="RobaMenu" title="robaList.title" page="/robas.html"/>
+			<Item name="FakturaMenu" title="fakturaList.title" page="/fakturas.html"/>
+			<Item name="StavkeMenu" title="stavkeList.title" page="/stavkes.html"/>
+        </Menu>
+        <Menu name="WebServices" title="webServices.title" page="/services.html" roles="ROLE_ADMIN">
+        </Menu>
         <Menu name="Logout" title="user.logout" page="/logout.jsp" roles="ROLE_ADMIN,ROLE_USER"/>
         <!--Stavke-START-->
-        <Menu name="StavkeMenu" title="stavkeList.title" page="/stavkes.html"/>
+<!--        <Menu name="StavkeMenu" title="stavkeList.title" page="/stavkes.html"/>-->
         <!--Stavke-END-->
         <!--Faktura-START-->
-        <Menu name="FakturaMenu" title="fakturaList.title" page="/fakturas.html"/>
+<!--        <Menu name="FakturaMenu" title="fakturaList.title" page="/fakturas.html"/>-->
         <!--Faktura-END-->
-        <!--Klijent-START-->
-        <Menu name="KlijentMenu" title="klijentList.title" page="/klijents.html"/>
-        <!--Klijent-END-->
         <!--Roba-START-->
-        <Menu name="RobaMenu" title="robaList.title" page="/robas.html"/>
+<!--        <Menu name="RobaMenu" title="robaList.title" page="/robas.html"/>-->
         <!--Roba-END-->
+        <!--Klijent-START-->
+<!--        <Menu name="KlijentMenu" title="klijentList.title" page="/klijents.html"/>-->
+        <!--Klijent-END-->
     </Menus>
 </MenuConfig>

@@ -7,18 +7,19 @@
     <menu:displayMenu name="MainMenu"/>
     <menu:displayMenu name="UserMenu"/>
     <menu:displayMenu name="AdminMenu"/>
+    <menu:displayMenu name="ApplicationMenu"/>
     <menu:displayMenu name="Logout"/>
     <!--Stavke-START-->
-    <menu:displayMenu name="StavkeMenu"/>
+<!--    <menu:displayMenu name="StavkeMenu"/>-->
     <!--Stavke-END-->
     <!--Faktura-START-->
-    <menu:displayMenu name="FakturaMenu"/>
+<!--    <menu:displayMenu name="FakturaMenu"/>-->
     <!--Faktura-END-->
     <!--Klijent-START-->
-    <menu:displayMenu name="KlijentMenu"/>
+<!--    <menu:displayMenu name="KlijentMenu"/>-->
     <!--Klijent-END-->
     <!--Roba-START-->
-    <menu:displayMenu name="RobaMenu"/>
+<!--    <menu:displayMenu name="RobaMenu"/>-->
     <!--Roba-END-->
 </ul>
 </menu:useMenuDisplayer>
