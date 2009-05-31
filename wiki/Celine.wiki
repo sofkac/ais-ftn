@@ -14,12 +14,12 @@
   * <font color="red">maven</font>
   * <font color="red">SVN</font>
   * <font color="red">Eclipse</font>
-=<font color="red">J2EE Architecture</font>, layers=
+=<font color="red">J2EE Architecture, layers=
   * POJO
   * Persistance
     * DAO pattern
   * Business layer, service
     * Managers
-    * Web services
+    * <font color="red">Web services</font>
   * Presentation, web layer
-    * MVC pattern
+    * <font color="red">MVC pattern</font></font>
