@@ -99,24 +99,24 @@
         <column>Naziv</column>
     <row>
         <value description="idr">-1</value>
-        <value description="JM">CuJvUxCyKr</value>
-        <value description="Kolicina">2209688196740435968</value>
-        <value description="Napomena">XiAeYpSxCdItNkEpBhRwTaXtKkUrTkVrYlXtFxBcPyJaYaSiJaNyWnGfMrElXzDwDyFrUgRhNbCkTrNzBlXlMzTmYwMjYiHfDcZz</value>
-        <value description="Naziv">AnHxCjOlSvMgFfShYuOoBcRyQnRbCoReRhVkWkDiQjCuKgZhJg</value>
+        <value description="JM">kom</value>
+        <value description="Kolicina">45</value>
+        <value description="Napomena">nema</value>
+        <value description="Naziv">Pneumatik Wintera 175-55</value>
     </row>
     <row>
         <value description="idr">-2</value>
-        <value description="JM">RnBlXdJfKj</value>
-        <value description="Kolicina">1322109080077884416</value>
-        <value description="Napomena">JuLoZxGbVaBuIoCqOmLeAbEyUwLaHiRcEhJfKlNnCyPuXzKeSlAzTaJfMuLvJmZpPrCxKtRsNdKwUyCoJoMxSrYfMjFrUqPgYzGe</value>
-        <value description="Naziv">VlIfKjDwNfBcWkUvBuZmYhFmPgKeCjNzRgQbSuSgNpTlRuAeBv</value>
+        <value description="JM">litra</value>
+        <value description="Kolicina">433</value>
+        <value description="Napomena">cuvati na temp. do 20 C</value>
+        <value description="Naziv">Motorno ulje VVXX3</value>
     </row>
     <row>
         <value description="idr">-3</value>
-        <value description="JM">WoLpRbGmYv</value>
-        <value description="Kolicina">5609459740848798720</value>
-        <value description="Napomena">NiVqDsRoFqSwMxMfPcTuGdVfTrZtQoWjUsRuZkZjJgGrAaPtWaYtCbUzOvXfSwOzEpEmYdRcBuRpCwUdYaDgUcKmPiXhLeFxVdJq</value>
-        <value description="Naziv">RgSrMbEnEgOsEdJjEwYaTxJeEsYnRnHbHlIsDaAsQzQtNdGwTy</value>
+        <value description="JM">metar</value>
+        <value description="Kolicina">2500</value>
+        <value description="Napomena">meriti najmanje na 2 metra</value>
+        <value description="Naziv">Traka za obelezavanje</value>
     </row>
     </table>
     <!--Roba-END-->
@@ -129,24 +129,24 @@
         <column>Telefon</column>
     <row>
         <value description="idk">-1</value>
-        <value description="Adresa">ObCqQnSvQaHdIvZkRzUzWwDkTnDnQsHhOkRxZzVvXfTaP</value>
-        <value description="Mesto">KrYsQqFlCcRsPiZhTxBcQdJfQ</value>
-        <value description="Naziv">CsTdGcVnByQsJpBpNsCxYvWkZpBmYrGyHbJmHkUqXxLzS</value>
-        <value description="Telefon">IuWcTyXiZzFkXtG</value>
+        <value description="Adresa">Bulevar 33</value>
+        <value description="Mesto">Novi Sad</value>
+        <value description="Naziv">AutoMoto</value>
+        <value description="Telefon">222333</value>
     </row>
     <row>
         <value description="idk">-2</value>
-        <value description="Adresa">EcOuXmHqVfAtGoQcQyQnFgWjBdKcRfWbKhSdSnRePgMiV</value>
-        <value description="Mesto">CcPnSqRdNsHcIdVbUeXpIbAvS</value>
-        <value description="Naziv">FkEzEoYqBmBjJjNnIiHbUeVbBkNxCuRfXjUcWxHzOqWtQ</value>
-        <value description="Telefon">OfYrDxHzVzZkPcZ</value>
+        <value description="Adresa">Avenija 22</value>
+        <value description="Mesto">Beograd</value>
+        <value description="Naziv">Speed</value>
+        <value description="Telefon">555666</value>
     </row>
     <row>
         <value description="idk">-3</value>
-        <value description="Adresa">NnPfPvVmLzIqSfWfLeKjIdVaEyZpYxFkYuIeCrJfFjPyV</value>
-        <value description="Mesto">GmYiJqYwRmZqSwZmMtXtNaQjP</value>
-        <value description="Naziv">XxOcOqFrJkMfSeYzNnTjSfSwVpBkKzByPfSdLoSnEmVoE</value>
-        <value description="Telefon">VjZiYqFdWdOhEgE</value>
+        <value description="Adresa">Trg u krug 77</value>
+        <value description="Mesto">Subotica</value>
+        <value description="Naziv">Stop'n'Go</value>
+        <value description="Telefon">223344</value>
     </row>
     </table>
     <!--Klijent-END-->
@@ -159,24 +159,24 @@
         <column>Napomena</column>
     <row>
         <value description="idf">-1</value>
-        <value description="Datum">2009-04-15</value>
+        <value description="Datum">2009-02-23</value>
         <value description="Iznos">11.11</value>
         <value description="FK_K">-1</value>
-        <value description="Napomena">KwMbQjTnTgUqBiDxDlAgLlFoEoSfBqGkMqHyCoNpQyHlJlVwGmShRyRyXcQfPiMzMzEqAaGnKvQsNiWbOmJhKfSxAvJwGqIvRuFiRkYxTgOuBpBiEpRpAwIhCbDlNhUdOkQeXzZeUtHaMsAkMsAvHfOjJcAoXiWkXxEtDyWpLfEfLrRsRfKvZjRmNrYzRoXzMnRrKpXl</value>
+        <value description="Napomena">sve uredno izmireno</value>
     </row>
     <row>
         <value description="idf">-2</value>
-        <value description="Datum">2009-04-15</value>
+        <value description="Datum">2009-03-22</value>
         <value description="Iznos">22.22</value>
         <value description="FK_K">-2</value>
-        <value description="Napomena">PdLeHmYsRsSbSxSsHjCbPzOsDcSqPuMgLoOyEoRbNjWuXoVtDoCwQmLtIcLtMlKxShYrPqTcOjObUdXvCcAhNqUoXbNcMwUzKhNwJzDePhRlDfZnWkZeHtYnBmTtEiPrOdYmIeQkZlOmIoNzQdXvBcMyXnDiSzSkYxYaEwEfWdIgYyMwCbZsIiXwDyThUrZiOnBgMnNs</value>
+        <value description="Napomena">kasnio sa uplatom</value>
     </row>
     <row>
         <value description="idf">-3</value>
-        <value description="Datum">2009-04-15</value>
+        <value description="Datum">2009-03-15</value>
         <value description="Iznos">33.33</value>
         <value description="FK_K">-3</value>
-        <value description="Napomena">RaBhEpZuLgRvCwKnRlUhUfCbHyOnDaDjOxYlNlBeGbMtHxZaSyNzYhDkHaNsSmBqFiGjCyVvOoDbXxSjGmGnPzXrUiWbMlIbMrYrXtMbTgTvHhJpPpUqVeYpHdEyJkVgCsBiIlCaLhRcViSqUcZvJkEcBdEwQbEpTdRdCrBiSsUtMxMvDkYrHmFtVpPmNdLjDqZcTlXz</value>
+        <value description="Napomena">placeno u gotovini</value>
     </row>
     </table>
     <!--Faktura-END-->
@@ -190,22 +190,22 @@
     <row>
         <value description="ids">-1</value>
         <value description="FK_F">-1</value>
-        <value description="Kolicina">11.11</value>
-        <value description="Napomena">VbXeKhHbGvYcFpD</value>
+        <value description="Kolicina">25</value>
+        <value description="Napomena">nema</value>
         <value description="FK_R">-1</value>
     </row>
     <row>
         <value description="ids">-2</value>
         <value description="FK_F">-2</value>
-        <value description="Kolicina">22.22</value>
-        <value description="Napomena">GrCrCiSkYyPhXeY</value>
+        <value description="Kolicina">125</value>
+        <value description="Napomena">no comment</value>
         <value description="FK_R">-2</value>
     </row>
     <row>
         <value description="ids">-3</value>
         <value description="FK_F">-3</value>
-        <value description="Kolicina">33.33</value>
-        <value description="Napomena">QwKgEzCvOmIfQpK</value>
+        <value description="Kolicina">50</value>
+        <value description="Napomena">-</value>
         <value description="FK_R">-3</value>
     </row>
     </table>
