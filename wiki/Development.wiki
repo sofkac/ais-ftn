@@ -1,11 +1,11 @@
 =Development=
 -----
 == Persistence ==
-    * <font color="red">Development</font>
+    * <font color="red">Development
       * POJO
         * Generating
         * Annotation
-        * DAO - Generating
+        * DAO - Generating</font>
 == Business ==
     * Development
       * Generating Managers
