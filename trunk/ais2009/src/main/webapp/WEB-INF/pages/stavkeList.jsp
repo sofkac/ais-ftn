@@ -3,7 +3,7 @@
 <head>
     <title><fmt:message key="stavkeList.title"/></title>
     <meta name="heading" content="<fmt:message key='stavkeList.heading'/>"/>
-    <meta name="menu" content="StavkeMenu"/>
+    <meta name="menu" content="ApplicationMenu"/>
 </head>
 
 <c:set var="buttons">
