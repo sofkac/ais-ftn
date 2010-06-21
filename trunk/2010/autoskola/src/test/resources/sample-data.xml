@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <table name="app_user">
+        <column>id</column>
+        <column>username</column>
+        <column>password</column>
+        <column>first_name</column>
+        <column>last_name</column>
+        <column>address</column>
+        <column>city</column>
+        <column>country</column>
+        <column>email</column>
+        <column>phone_number</column>
+        <column>postal_code</column>
+        <column>province</column>
+        <column>website</column>
+        <column>password_hint</column>
+        <column>version</column>
+        <column>account_enabled</column>
+        <column>account_expired</column>
+        <column>account_locked</column>
+        <column>credentials_expired</column>
+        <row>
+            <value description="id">-1</value>
+            <value description="username">user</value>
+            <value description="password">12dea96fec20593566ab75692c9949596833adc9</value>
+            <value description="first_name">Tomcat</value>
+            <value description="last_name">User</value>
+            <value description="address"></value>
+            <value description="city">Denver</value>
+            <value description="country">US</value>
+            <value description="email">matt_raible@yahoo.com</value>
+            <value description="phone_number"></value>
+            <value description="postal_code">80210</value>
+            <value description="province">CO</value>
+            <value description="website">http://tomcat.apache.org</value>
+            <value description="password_hint"><![CDATA[A male kitty.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+        </row>
+        <row>
+            <value description="id">-2</value>
+            <value description="username">admin</value>
+            <value description="password">d033e22ae348aeb5660fc2140aec35850c4da997</value>
+            <value description="first_name">Matt</value>
+            <value description="last_name">Raible</value>
+            <value description="address"></value>
+            <value description="city">Denver</value>
+            <value description="country">US</value>
+            <value description="email">matt@raibledesigns.com</value>
+            <value description="phone_number"></value>
+            <value description="postal_code">80210</value>
+            <value description="province">CO</value>
+            <value description="website">http://raibledesigns.com</value>
+            <value description="password_hint"><![CDATA[Not a female kitty.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+        </row>
+    </table>
+    <table name="role">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>
+        <row>
+            <value description="id">-1</value>
+            <value description="name">ROLE_ADMIN</value>
+            <value description="description"><![CDATA[Administrator role (can edit Users)]]></value>
+        </row>
+        <row>
+            <value description="id">-2</value>
+            <value description="name">ROLE_USER</value>
+            <value description="description"><![CDATA[Default role for all Users]]></value>
+        </row>
+    </table>
+    <table name="user_role">
+        <column>user_id</column>
+        <column>role_id</column>
+        <row>
+            <value description="user_id">-1</value>
+            <value description="role_id">-2</value>
+        </row>
+        <row>
+            <value description="user_id">-2</value>
+            <value description="role_id">-1</value>
+        </row>
+    </table>
+
+    <!--Osoblje-START-->
+    <table name="osoblje">
+        <column>osobljeID</column>
+        <column>Detalji</column>
+        <column>Ime</column>
+        <column>Prezime</column>
+        <column>Telefon</column>
+        <column>Vrsta</column>
+    <row>
+        <value description="osobljeID">-1</value>
+        <value description="Detalji">iskustvo veliko</value>
+        <value description="Ime">Don Vito</value>
+        <value description="Prezime">Gardinovacki</value>
+        <value description="Telefon">062-662244</value>
+        <value description="Vrsta">1</value>
+    </row>
+    <row>
+        <value description="osobljeID">-2</value>
+        <value description="Detalji">dobra skroz</value>
+        <value description="Ime">jovana</value>
+        <value description="Prezime">milosevic</value>
+        <value description="Telefon">3332-2211</value>
+        <value description="Vrsta">1</value>
+    </row>
+    <row>
+        <value description="osobljeID">-3</value>
+        <value description="Detalji">pocetnik skoro</value>
+        <value description="Ime">alek</value>
+        <value description="Prezime">nikolic</value>
+        <value description="Telefon">nema</value>
+        <value description="Vrsta">2</value>
+    </row>
+    </table>
+    <!--Osoblje-END-->
+    
+    <!--Vozilo-START-->
+    <table name="vozilo">
+        <column>voziloID</column>
+        <column>Detalji</column>
+        <column>Godiste</column>
+        <column>Marka</column>
+        <column>Model</column>
+        <column>RegBroj</column>
+    <row>
+        <value description="voziloID">-1</value>
+        <value description="Detalji">odlican</value>
+        <value description="Godiste">1999</value>
+        <value description="Marka">ford</value>
+        <value description="Model">corsa</value>
+        <value description="RegBroj">NS-111-222</value>
+    </row>
+    <row>
+        <value description="voziloID">-2</value>
+        <value description="Detalji">dobar</value>
+        <value description="Godiste">2008</value>
+        <value description="Marka">VW</value>
+        <value description="Model">Polo</value>
+        <value description="RegBroj">NS-371-771</value>
+    </row>
+    <row>
+        <value description="voziloID">-3</value>
+        <value description="Detalji">cool</value>
+        <value description="Godiste">2007</value>
+        <value description="Marka">Renault</value>
+        <value description="Model">Twingo</value>
+        <value description="RegBroj">BG12-21</value>
+    </row>
+    </table>
+    <!--Vozilo-END-->
+
+    <!--Polaznik-START-->
+    <table name="polaznik">
+        <column>idpolaznik</column>
+        <column>Adresa</column>
+        <column>DatumProjave</column>
+        <column>DatumRodj</column>
+        <column>Detalji</column>
+        <column>Grad</column>
+        <column>Ime</column>
+        <column>PostBroj</column>
+        <column>Prezime</column>
+        <column>Telefon</column>
+    <row>
+        <value description="idpolaznik">-1</value>
+        <value description="Adresa">svetosavska 4</value>
+        <value description="DatumProjave">2010-04-05</value>
+        <value description="DatumRodj">2010-04-05</value>
+        <value description="Detalji">nema</value>
+        <value description="Grad">novi sad</value>
+        <value description="Ime">momcilo</value>
+        <value description="PostBroj">21000</value>
+        <value description="Prezime">djuric</value>
+        <value description="Telefon">021-555-444</value>
+    </row>
+    <row>
+        <value description="idpolaznik">-2</value>
+        <value description="Adresa">nicifora 33</value>
+        <value description="DatumProjave">2010-04-05</value>
+        <value description="DatumRodj">2010-04-05</value>
+        <value description="Detalji">jok vala</value>
+        <value description="Grad">zajecar</value>
+        <value description="Ime">mile</value>
+        <value description="PostBroj">13000</value>
+        <value description="Prezime">lojpur</value>
+        <value description="Telefon">060-060-0000</value>
+    </row>
+    <row>
+        <value description="idpolaznik">-3</value>
+        <value description="Adresa">ludovicki bulevar 21</value>
+        <value description="DatumProjave">2010-04-05</value>
+        <value description="DatumRodj">2010-04-05</value>
+        <value description="Detalji">no comment</value>
+        <value description="Grad">becej</value>
+        <value description="Ime">marjan</value>
+        <value description="PostBroj">23300</value>
+        <value description="Prezime">tomic</value>
+        <value description="Telefon">021-123456</value>
+    </row>
+    </table>
+    <!--Polaznik-END-->
+
+    <!--Placanja-START-->
+    <table name="placanja">
+        <column>idplacanje</column>
+        <column>Date</column>
+        <column>Detalji</column>
+        <column>Iznos</column>
+        <column>polaznikFK</column>    
+    <row>
+        <value description="idplacanje">-1</value>
+        <value description="Date">2010-04-05</value>
+        <value description="Detalji">sve ok</value>
+        <value description="Iznos">33.33</value>
+        <value description="polaznikFK">-1</value>
+    </row>
+    <row>
+        <value description="idplacanje">-2</value>
+        <value description="Date">2010-04-05</value>
+        <value description="Detalji">kasnio dosta</value>
+        <value description="Iznos">44.44</value>
+        <value description="polaznikFK">-2</value>
+    </row>
+    <row>
+        <value description="idplacanje">-3</value>
+        <value description="Date">2010-04-05</value>
+        <value description="Detalji">na vreme</value>
+        <value description="Iznos">55.55</value>
+        <value description="polaznikFK">-3</value>
+    </row>
+    </table>
+    <!--Placanja-END-->
+
+    <!--Casovi-START-->
+    <table name="casovi">
+        <column>idCas</column>
+        <column>datumCasa</column>
+        <column>Detalji</column>
+        <column>osobljeFK</column>    
+        <column>polaznikFK</column>    
+        <column>Status</column>
+        <column>voziloFK</column>    
+        <column>vremeOd</column>
+        <column>vremeDo</column>
+        <column>Vrsta</column>
+    <row>
+        <value description="idCas">-1</value>
+        <value description="datumCasa">2010-04-04</value>
+        <value description="Detalji">padala je kisa</value>
+        <value description="osobljeFK">-1</value>
+        <value description="polaznikFK">-1</value>
+        <value description="Status">1</value>
+        <value description="voziloFK">-1</value>
+        <value description="vremeOd">10:00:00</value>
+        <value description="vremeDo">11:00:00</value>
+        <value description="Vrsta">1</value>
+    </row>
+    <row>
+        <value description="idCas">-2</value>
+        <value description="datumCasa">2010-04-04</value>
+        <value description="Detalji">sneg</value>
+        <value description="osobljeFK">-2</value>
+        <value description="polaznikFK">-2</value>
+        <value description="Status">2</value>
+        <value description="voziloFK">-2</value>
+        <value description="vremeOd">12:00:00</value>
+        <value description="vremeDo">12:30:00</value>
+        <value description="Vrsta">3</value>
+    </row>
+    <row>
+        <value description="idCas">-3</value>
+        <value description="datumCasa">2010-04-04</value>
+        <value description="Detalji">nocna voznja...</value>
+        <value description="osobljeFK">-3</value>
+        <value description="polaznikFK">-3</value>
+        <value description="Status">1</value>
+        <value description="voziloFK">-3</value>
+        <value description="vremeOd">9:00:00</value>
+        <value description="vremeDo">11:00:00</value>
+        <value description="Vrsta">2</value>
+    </row>
+    </table>
+    <!--Casovi-END-->
+</dataset>
+
+
+
+
+
+
