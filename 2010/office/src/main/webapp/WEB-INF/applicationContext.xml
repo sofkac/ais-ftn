@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+    <!--OfficeDao-START-->
+    <bean id="officeDao" class="edu.ftn.ais.dao.hibernate.OfficeDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--OfficeDao-END-->
+
+    <!--ClientDao-START-->
+    <bean id="clientDao" class="edu.ftn.ais.dao.hibernate.ClientDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--ClientDao-END-->
+
+    <!-- Add new DAOs here -->
+
+    <!--OfficeManager-START-->
+    <bean id="officeManager" class="edu.ftn.ais.service.impl.OfficeManagerImpl">
+        <constructor-arg ref="officeDao"/>
+    </bean>
+    <!--OfficeManager-END-->
+
+    <!--ClientManager-START-->
+    <bean id="clientManager" class="edu.ftn.ais.service.impl.ClientManagerImpl">
+        <constructor-arg ref="clientDao"/>
+    </bean>
+    <!--ClientManager-END-->
+
+    <!-- Add new Managers here -->
+
+    <!-- Add new Actions here -->
+</beans>

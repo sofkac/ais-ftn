@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+    
+
+    <!--CasoviDao-START-->
+    <bean id="casoviDao" class="edu.ftn.ais.dao.hibernate.CasoviDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--CasoviDao-END-->
+
+    <!--OsobljeDao-START-->
+    <bean id="osobljeDao" class="edu.ftn.ais.dao.hibernate.OsobljeDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--OsobljeDao-END-->
+
+    <!--PlacanjaDao-START-->
+    <bean id="placanjaDao" class="edu.ftn.ais.dao.hibernate.PlacanjaDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--PlacanjaDao-END-->
+
+    <!--PolaznikDao-START-->
+    <bean id="polaznikDao" class="edu.ftn.ais.dao.hibernate.PolaznikDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--PolaznikDao-END-->
+
+    <!--VoziloDao-START-->
+    <bean id="voziloDao" class="edu.ftn.ais.dao.hibernate.VoziloDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--VoziloDao-END-->
+
+    <!-- Add new DAOs here -->
+
+    
+
+    <!--CasoviManager-START-->
+    <bean id="casoviManager" class="edu.ftn.ais.service.impl.CasoviManagerImpl">
+        <constructor-arg ref="casoviDao"/>
+    </bean>
+    <!--CasoviManager-END-->
+
+    <!--OsobljeManager-START-->
+    <bean id="osobljeManager" class="edu.ftn.ais.service.impl.OsobljeManagerImpl">
+        <constructor-arg ref="osobljeDao"/>
+    </bean>
+    <!--OsobljeManager-END-->
+
+    <!--PlacanjaManager-START-->
+    <bean id="placanjaManager" class="edu.ftn.ais.service.impl.PlacanjaManagerImpl">
+        <constructor-arg ref="placanjaDao"/>
+    </bean>
+    <!--PlacanjaManager-END-->
+
+    <!--PolaznikManager-START-->
+    <bean id="polaznikManager" class="edu.ftn.ais.service.impl.PolaznikManagerImpl">
+        <constructor-arg ref="polaznikDao"/>
+    </bean>
+    <!--PolaznikManager-END-->
+
+    <!--VoziloManager-START-->
+    <bean id="voziloManager" class="edu.ftn.ais.service.impl.VoziloManagerImpl">
+        <constructor-arg ref="voziloDao"/>
+    </bean>
+    <!--VoziloManager-END-->
+
+    <!-- Add new Managers here -->
+
+    <!-- Add new Actions here -->
+</beans>
